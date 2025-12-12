@@ -64,22 +64,22 @@ export default function AjStudiozApiPage() {
               projects={[
                 {
                   id: "claude",
-                  image: "/api/placeholder/400/300",
+                  image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
                   title: "Claude 3.5 Sonnet"
                 },
                 {
                   id: "gpt4",
-                  image: "/api/placeholder/400/300", 
+                  image: "https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&h=300&fit=crop", 
                   title: "GPT-4 Turbo"
                 },
                 {
                   id: "gemini",
-                  image: "/api/placeholder/400/300",
+                  image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=300&fit=crop",
                   title: "Gemini Pro"
                 },
                 {
                   id: "kimi",
-                  image: "/api/placeholder/400/300",
+                  image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
                   title: "Moonshot Kimi"
                 }
               ]}
