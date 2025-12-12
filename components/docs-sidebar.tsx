@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import { usePathname } from "next/navigation"
+import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -8,54 +10,55 @@ const navigation = [
   {
     title: "Getting Started",
     items: [
-      { title: "Overview", href: "#introduction", active: true },
-      { title: "Introduction", href: "#introduction" },
-      { title: "The Hitchhiker's Guide to AJ STUDIOZ", href: "#quick-start" },
-      { title: "Models and Pricing", href: "#available-models" },
-      { title: "What's New?", href: "#whats-new" },
+      { title: "Overview", href: "/docs/getting-started" },
+      { title: "Introduction", href: "/docs/getting-started/introduction" },
+      { title: "The Hitchhiker's Guide to AJ STUDIOZ", href: "/docs/getting-started/quick-start" },
+      { title: "Models and Pricing", href: "/docs/getting-started/models-pricing" },
+      { title: "What's New?", href: "/docs/getting-started/whats-new" },
     ],
   },
   {
     title: "Key Information",
     items: [
-      { title: "Authentication", href: "#authentication" },
-      { title: "Manage Billing", href: "#billing" },
-      { title: "Consumption and Rate Limits", href: "#rate-limits" },
-      { title: "Regional Endpoints", href: "#endpoints" },
+      { title: "Authentication", href: "/docs/key-information/authentication" },
+      { title: "Manage Billing", href: "/docs/key-information/billing" },
+      { title: "Consumption and Rate Limits", href: "/docs/key-information/rate-limits" },
+      { title: "Regional Endpoints", href: "/docs/key-information/endpoints" },
     ],
   },
   {
     title: "AJ STUDIOZ API",
     items: [
-      { title: "Overview", href: "#aj-overview" },
-      { title: "Available Models", href: "#available-models" },
-      { title: "API Endpoints", href: "#aj-endpoints" },
-      { title: "Code Examples", href: "#aj-examples" },
+      { title: "Overview", href: "/docs/aj-studioz-api" },
+      { title: "Available Models", href: "/docs/aj-studioz-api/models" },
+      { title: "API Endpoints", href: "/docs/aj-studioz-api/endpoints" },
+      { title: "Code Examples", href: "/docs/aj-studioz-api/examples" },
     ],
   },
   {
     title: "NEXARIQ Lynxa Pro",
     items: [
-      { title: "Overview", href: "#nexariq-overview" },
-      { title: "Model Specifications", href: "#model-specs" },
-      { title: "API Endpoints", href: "#nexariq-endpoints" },
-      { title: "Generate API Key", href: "#generate-key" },
-      { title: "Usage Examples", href: "#nexariq-examples" },
+      { title: "Overview", href: "/docs/nexariq-lynxa-pro" },
+      { title: "Model Specifications", href: "/docs/nexariq-lynxa-pro/specifications" },
+      { title: "API Endpoints", href: "/docs/nexariq-lynxa-pro/endpoints" },
+      { title: "Generate API Key", href: "/docs/nexariq-lynxa-pro/generate-key" },
+      { title: "Usage Examples", href: "/docs/nexariq-lynxa-pro/examples" },
     ],
   },
   {
     title: "Guides",
     items: [
-      { title: "Comparison Guide", href: "#comparison" },
-      { title: "Best Practices", href: "#best-practices" },
-      { title: "Tool Use", href: "#tool-use" },
-      { title: "Images", href: "#images" },
+      { title: "Comparison Guide", href: "/docs/guides/comparison" },
+      { title: "Best Practices", href: "/docs/guides/best-practices" },
+      { title: "Tool Use", href: "/docs/guides/tool-use" },
+      { title: "Images", href: "/docs/guides/images" },
     ],
   },
 ]
 
 export function DocsSidebar() {
   const [expandedSections, setExpandedSections] = useState<string[]>(navigation.map((section) => section.title))
+  const pathname = usePathname()
 
   const toggleSection = (title: string) => {
     setExpandedSections((prev) => (prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]))
@@ -79,17 +82,17 @@ export function DocsSidebar() {
               <ul className="space-y-0.5">
                 {section.items.map((item) => (
                   <li key={item.href}>
-                    <a
+                    <Link
                       href={item.href}
                       className={cn(
                         "block py-2 px-3 text-sm rounded-md transition-colors",
-                        item.active
+                        pathname === item.href
                           ? "text-foreground font-medium bg-muted"
                           : "text-muted-foreground hover:text-foreground hover:bg-accent",
                       )}
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
