@@ -21,6 +21,7 @@ const navigation = [
     title: "Key Information",
     items: [
       { title: "Authentication", href: "/docs/key-information/authentication" },
+      { title: "Sign In / Sign Up", href: "/docs/auth" },
       { title: "Manage Billing", href: "/docs/key-information/billing" },
       { title: "Consumption and Rate Limits", href: "/docs/key-information/rate-limits" },
       { title: "Regional Endpoints", href: "/docs/key-information/endpoints" },

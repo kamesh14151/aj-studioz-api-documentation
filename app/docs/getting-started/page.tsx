@@ -2,6 +2,8 @@ import { CodeBlock } from "@/components/code-block"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, Zap, Shield, Globe, Code2, Brain } from "lucide-react"
+import { AnimatedFolder } from "@/components/3d-folder"
+import { MiniChart } from "@/components/mini-chart"
 
 export default function GettingStartedPage() {
   return (

@@ -234,7 +234,7 @@ print(result["choices"][0]["message"]["content"])`}
 
               <div>
                 <h4 className="font-medium mb-2">JavaScript Example</h4>
-                <CodeBook
+                <CodeBlock
                   language="javascript"
                   code={`const apiKey = 'nxq_your_key_here';
 const url = 'https://lynxa-pro-backend.vercel.app/api/lynxa';

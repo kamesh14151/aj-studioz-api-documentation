@@ -1,21 +1,10 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Moon, Sun, Search, Menu } from "lucide-react"
-import { useState, useEffect } from "react"
+import { Search, Menu } from "lucide-react"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
 
 export function DocsHeader() {
-  const [darkMode, setDarkMode] = useState(false)
-
-  useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark")
-    setDarkMode(isDark)
-  }, [])
-
-  const toggleDarkMode = () => {
-    document.documentElement.classList.toggle("dark")
-    setDarkMode(!darkMode)
-  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl">
@@ -58,9 +47,7 @@ export function DocsHeader() {
               <span>⌘</span>K
             </kbd>
           </Button>
-          <Button variant="ghost" size="icon" onClick={toggleDarkMode} className="h-9 w-9">
-            {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-          </Button>
+          <ThemeToggle />
         </div>
       </div>
     </header>

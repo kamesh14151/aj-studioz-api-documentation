@@ -2,6 +2,9 @@ import { CodeBlock } from "@/components/code-block"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Zap, Code2, Globe, CheckCircle2, ArrowRight } from "lucide-react"
+import { AnimatedFolder } from "@/components/3d-folder"
+import { MiniChart } from "@/components/mini-chart"
+import { LocationMap } from "@/components/expand-map"
 
 export default function AjStudiozApiPage() {
   return (
@@ -53,6 +56,39 @@ export default function AjStudiozApiPage() {
         </div>
 
         <h2 className="text-3xl font-semibold mb-6">Available Models</h2>
+        
+        <div className="grid gap-8 md:grid-cols-2 mb-12">
+          <div>
+            <AnimatedFolder
+              title="AI Models Collection"
+              projects={[
+                {
+                  id: "claude",
+                  image: "/api/placeholder/400/300",
+                  title: "Claude 3.5 Sonnet"
+                },
+                {
+                  id: "gpt4",
+                  image: "/api/placeholder/400/300", 
+                  title: "GPT-4 Turbo"
+                },
+                {
+                  id: "gemini",
+                  image: "/api/placeholder/400/300",
+                  title: "Gemini Pro"
+                },
+                {
+                  id: "kimi",
+                  image: "/api/placeholder/400/300",
+                  title: "Moonshot Kimi"
+                }
+              ]}
+            />
+          </div>
+          <div>
+            <MiniChart />
+          </div>
+        </div>
         
         <div className="space-y-6 mb-12">
           <div className="grid gap-4 md:grid-cols-2">
@@ -181,7 +217,24 @@ curl -X GET "https://api.ajstudioz.dev/api/models" \\
           </div>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6 mt-16">Quick Start Example</h2>
+        <h2 className="text-3xl font-semibold mb-6 mt-16">Global Infrastructure</h2>
+        
+        <div className="mb-12">
+          <p className="text-muted-foreground mb-8 leading-relaxed">
+            AJ STUDIOZ operates from multiple regions worldwide to ensure low-latency access and high availability 
+            for users across the globe. Our infrastructure is designed for performance and reliability.
+          </p>
+          <LocationMap 
+            locations={[
+              { name: "US East", coordinates: [40.7128, -74.0060], color: "#3b82f6" },
+              { name: "US West", coordinates: [37.7749, -122.4194], color: "#10b981" },
+              { name: "Europe", coordinates: [51.5074, -0.1278], color: "#8b5cf6" },
+              { name: "Asia Pacific", coordinates: [35.6762, 139.6503], color: "#f59e0b" }
+            ]}
+          />
+        </div>
+
+        <h2 className="text-3xl font-semibold mb-6">Quick Start Example</h2>
         
         <div className="space-y-6">
           <div>
