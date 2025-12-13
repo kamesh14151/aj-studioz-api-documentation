@@ -1,11 +1,10 @@
 import { CodeBlock } from "@/components/code-block"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Zap, Code2, Globe, CheckCircle2, ArrowRight, Cloud, Cpu } from "lucide-react"
+import { Zap, Code2, Globe, CheckCircle2, ArrowRight } from "lucide-react"
 import { AnimatedFolder } from "@/components/3d-folder"
 import { MiniChart } from "@/components/mini-chart"
 import { LocationMap } from "@/components/expand-map"
-import { GradientCard } from "@/components/gradient-card"
 
 export default function AjStudiozApiPage() {
   return (
@@ -300,81 +299,9 @@ curl -X GET "https://api.ajstudioz.dev/api/models" \\
           />
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6">Quick Start Example</h2>
+        <h2 className="text-3xl font-semibold mb-6">What's Next?</h2>
         
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Python with OpenAI SDK</h3>
-            <CodeBlock
-              language="python"
-              code={`from openai import OpenAI
-
-# Initialize client
-client = OpenAI(
-    api_key="aj-demo123456789abcdef",  # Use demo key for testing
-    base_url="https://api.ajstudioz.dev/api"
-)
-
-# Chat with Claude
-response = client.chat.completions.create(
-    model="claude-3.5-sonnet",
-    messages=[
-        {"role": "system", "content": "You are a coding assistant."},
-        {"role": "user", "content": "Write a Python function to calculate fibonacci"}
-    ],
-    max_tokens=500
-)
-
-print(response.choices[0].message.content)
-
-# Switch to GPT-4 with the same code
-response = client.chat.completions.create(
-    model="gpt-4-turbo",  # Just change the model name
-    messages=[
-        {"role": "user", "content": "Explain the code above"}
-    ]
-)
-
-print(response.choices[0].message.content)`}
-            />
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold mb-4">JavaScript/TypeScript</h3>
-            <CodeBlock
-              language="javascript"
-              code={`import OpenAI from 'openai';
-
-const openai = new OpenAI({
-  apiKey: 'aj-demo123456789abcdef',
-  baseURL: 'https://api.ajstudioz.dev/api',
-});
-
-async function chatWithAI() {
-  // Try different models easily
-  const models = ['claude-3.5-sonnet', 'gpt-4-turbo', 'gemini-pro'];
-  
-  for (const model of models) {
-    console.log(\`\\n--- Testing \${model} ---\`);
-    
-    const response = await openai.chat.completions.create({
-      model: model,
-      messages: [
-        { role: 'user', content: 'Write a haiku about programming' }
-      ],
-      max_tokens: 100
-    });
-    
-    console.log(response.choices[0].message.content);
-  }
-}
-
-chatWithAI().catch(console.error);`}
-            />
-          </div>
-        </div>
-
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-3">
           <Card className="p-6 border-blue-200 dark:border-blue-800">
             <div className="flex items-center gap-3 mb-4">
               <ArrowRight className="h-5 w-5 text-blue-600 dark:text-blue-400" />
@@ -404,6 +331,22 @@ chatWithAI().catch(console.error);`}
               className="text-green-600 hover:text-green-700 text-sm font-medium"
             >
               API Endpoints →
+            </a>
+          </Card>
+
+          <Card className="p-6 border-purple-200 dark:border-purple-800">
+            <div className="flex items-center gap-3 mb-4">
+              <ArrowRight className="h-5 w-5 text-purple-600 dark:text-purple-400" />
+              <h3 className="text-lg font-semibold">Code Examples</h3>
+            </div>
+            <p className="text-muted-foreground mb-4 text-sm">
+              Ready-to-use code examples in Python, JavaScript, and more.
+            </p>
+            <a 
+              href="/docs/aj-studioz-api/examples" 
+              className="text-purple-600 hover:text-purple-700 text-sm font-medium"
+            >
+              View Examples →
             </a>
           </Card>
         </div>
