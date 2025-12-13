@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, Star, Brain, Zap, Code, Database } from "lucide-react"
+import { Component as ThreeDCard } from "@/components/3d-card"
 
 export default function ModelsPricingPage() {
 
@@ -60,10 +61,14 @@ export default function ModelsPricingPage() {
           </Card>
         </div>
 
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Available Models</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6 text-center">TOP MODELS</h2>
         
-        <div className="grid gap-4 sm:gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mb-8 sm:mb-12">
-          <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow">
+        <div className="mb-8 sm:mb-12">
+          <ThreeDCard />
+        </div>
+        
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-1 lg:grid-cols-3 mb-8 sm:mb-12">
+          <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow border-purple-200 dark:border-purple-800">
             <div className="flex items-center gap-3 mb-3 sm:mb-4">
               <div className="p-2 rounded-lg bg-purple-100 dark:bg-purple-900/20">
                 <Brain className="h-4 w-4 sm:h-5 sm:w-5 text-purple-600 dark:text-purple-400" />
@@ -74,7 +79,7 @@ export default function ModelsPricingPage() {
               </div>
             </div>
             <div className="text-right mb-3 sm:mb-4">
-              <div className="text-xl sm:text-2xl font-bold">$15.00</div>
+              <div className="text-xl sm:text-2xl font-bold text-purple-600">$15.00</div>
               <div className="text-xs sm:text-sm text-muted-foreground">per 1M tokens</div>
             </div>
             <ul className="text-xs sm:text-sm space-y-1 text-muted-foreground mb-3 sm:mb-4">
@@ -83,12 +88,12 @@ export default function ModelsPricingPage() {
               <li>• Superior code generation</li>
               <li>• Multimodal understanding</li>
             </ul>
-            <Button variant="outline" size="sm" className="w-full">
-              Try Now
+            <Button variant="outline" size="sm" className="w-full border-purple-600 text-purple-600 hover:bg-purple-50">
+              Try Claude →
             </Button>
           </Card>
 
-          <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow">
+          <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow border-blue-200 dark:border-blue-800">
             <div className="flex items-center gap-3 mb-3 sm:mb-4">
               <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/20">
                 <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 dark:text-blue-400" />
@@ -99,7 +104,7 @@ export default function ModelsPricingPage() {
               </div>
             </div>
             <div className="text-right mb-3 sm:mb-4">
-              <div className="text-xl sm:text-2xl font-bold">$10.00</div>
+              <div className="text-xl sm:text-2xl font-bold text-blue-600">$10.00</div>
               <div className="text-xs sm:text-sm text-muted-foreground">per 1M tokens</div>
             </div>
             <ul className="text-xs sm:text-sm space-y-1 text-muted-foreground mb-3 sm:mb-4">
@@ -108,12 +113,12 @@ export default function ModelsPricingPage() {
               <li>• JSON mode support</li>
               <li>• Function calling</li>
             </ul>
-            <Button variant="outline" size="sm" className="w-full">
-              Try Now
+            <Button variant="outline" size="sm" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50">
+              Try GPT-4 →
             </Button>
           </Card>
 
-          <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow">
+          <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow border-green-200 dark:border-green-800">
             <div className="flex items-center gap-3 mb-3 sm:mb-4">
               <div className="p-2 rounded-lg bg-green-100 dark:bg-green-900/20">
                 <Code className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 dark:text-green-400" />
@@ -124,7 +129,7 @@ export default function ModelsPricingPage() {
               </div>
             </div>
             <div className="text-right mb-3 sm:mb-4">
-              <div className="text-xl sm:text-2xl font-bold">$7.00</div>
+              <div className="text-xl sm:text-2xl font-bold text-green-600">$7.00</div>
               <div className="text-xs sm:text-sm text-muted-foreground">per 1M tokens</div>
             </div>
             <ul className="text-xs sm:text-sm space-y-1 text-muted-foreground mb-3 sm:mb-4">
@@ -133,8 +138,8 @@ export default function ModelsPricingPage() {
               <li>• Fast inference speed</li>
               <li>• Efficient processing</li>
             </ul>
-            <Button variant="outline" size="sm" className="w-full">
-              Try Now
+            <Button variant="outline" size="sm" className="w-full border-green-600 text-green-600 hover:bg-green-50">
+              Try Gemini →
             </Button>
           </Card>
         </div>
