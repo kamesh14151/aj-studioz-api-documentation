@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Check, Copy } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { CodeBlock as UICodeBlock, CodeBlockCode, CodeBlockGroup } from "@/components/ui/code-block"
 
 interface CodeBlockProps {
   code: string
@@ -19,20 +20,23 @@ export function CodeBlock({ code, language }: CodeBlockProps) {
   }
 
   return (
-    <div className="relative group">
-      <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity">
+    <UICodeBlock className="relative group">
+      <CodeBlockGroup className="absolute right-2 top-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
         <Button
           size="sm"
           variant="ghost"
           onClick={copyToClipboard}
-          className="h-8 w-8 p-0 bg-secondary/80 hover:bg-secondary"
+          className="h-8 w-8 p-0 bg-background/80 hover:bg-accent border border-border"
         >
           {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
         </Button>
-      </div>
-      <pre className="rounded-lg bg-secondary p-4 overflow-x-auto">
-        <code className={`language-${language} text-sm font-mono`}>{code}</code>
-      </pre>
-    </div>
+      </CodeBlockGroup>
+      <CodeBlockCode 
+        code={code} 
+        language={language}
+        theme="github-dark-dimmed"
+        className="[&>pre]:!bg-transparent"
+      />
+    </UICodeBlock>
   )
 }
