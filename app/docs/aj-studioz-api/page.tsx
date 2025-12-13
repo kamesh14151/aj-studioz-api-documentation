@@ -1,10 +1,11 @@
 import { CodeBlock } from "@/components/code-block"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Zap, Code2, Globe, CheckCircle2, ArrowRight } from "lucide-react"
+import { Zap, Code2, Globe, CheckCircle2, ArrowRight, Cloud, Cpu } from "lucide-react"
 import { AnimatedFolder } from "@/components/3d-folder"
 import { MiniChart } from "@/components/mini-chart"
 import { LocationMap } from "@/components/expand-map"
+import { GradientCard } from "@/components/gradient-card"
 
 export default function AjStudiozApiPage() {
   return (
@@ -57,96 +58,161 @@ export default function AjStudiozApiPage() {
 
         <h2 className="text-3xl font-semibold mb-6">Available Models</h2>
         
-        <div className="grid gap-8 md:grid-cols-2 mb-12">
-          <div>
-            <AnimatedFolder
-              title="AI Models Collection"
-              projects={[
-                {
-                  id: "claude",
-                  image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
-                  title: "Claude 3.5 Sonnet"
-                },
-                {
-                  id: "gpt4",
-                  image: "https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&h=300&fit=crop", 
-                  title: "GPT-4 Turbo"
-                },
-                {
-                  id: "gemini",
-                  image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=300&fit=crop",
-                  title: "Gemini Pro"
-                },
-                {
-                  id: "kimi",
-                  image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
-                  title: "Moonshot Kimi"
-                }
-              ]}
+        {/* Cloud-Hosted Models Section */}
+        <div className="mb-16">
+          <div className="flex items-center gap-3 mb-8">
+            <Cloud className="h-6 w-6 text-blue-600" />
+            <div>
+              <h3 className="text-2xl font-semibold">Cloud-Hosted Models (24/7)</h3>
+              <p className="text-muted-foreground">Our cloud infrastructure hosts the following models with guaranteed uptime</p>
+            </div>
+          </div>
+          
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <GradientCard
+              gradient="purple"
+              badgeText="262K Context"
+              badgeColor="#8b5cf6"
+              title="Moonshot Kimi"
+              description="Ultra-long context model with 16,384 max completion tokens"
+              ctaText="Use Model"
+              ctaHref="#kimi"
+              imageUrl="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop"
+            />
+            
+            <GradientCard
+              gradient="orange"
+              badgeText="131K Context"
+              badgeColor="#f59e0b"
+              title="Qwen3"
+              description="Advanced multilingual model with 40,960 max tokens"
+              ctaText="Use Model"
+              ctaHref="#qwen3"
+              imageUrl="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=300&fit=crop"
+            />
+            
+            <GradientCard
+              gradient="green"
+              badgeText="131K Context"
+              badgeColor="#10b981"
+              title="Llama-4"
+              description="Latest Llama generation with 8,192 max tokens"
+              ctaText="Use Model"
+              ctaHref="#llama4"
+              imageUrl="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=300&fit=crop"
+            />
+            
+            <GradientCard
+              gradient="gray"
+              badgeText="131K Context"
+              badgeColor="#6b7280"
+              title="GPT-OSS"
+              description="Open-source GPT variant with 65,536 max tokens"
+              ctaText="Use Model"
+              ctaHref="#gpt-oss"
+              imageUrl="https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&h=300&fit=crop"
+            />
+            
+            <GradientCard
+              gradient="purple"
+              badgeText="131K Context"
+              badgeColor="#8b5cf6"
+              title="GPT-OSS-120B"
+              description="Large parameter GPT variant with 65,536 max tokens"
+              ctaText="Use Model"
+              ctaHref="#gpt-oss-120b"
+              imageUrl="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=400&h=300&fit=crop"
+            />
+            
+            <GradientCard
+              gradient="green"
+              badgeText="131K Context"
+              badgeColor="#10b981"
+              title="GLM-4.5-Air"
+              description="Efficient GLM model with 8,192 max tokens"
+              ctaText="Use Model"
+              ctaHref="#glm-4.5-air"
+              imageUrl="https://images.unsplash.com/photo-1639322537228-f710d846310a?w=400&h=300&fit=crop"
+            />
+            
+            <GradientCard
+              gradient="orange"
+              badgeText="131K Context"
+              badgeColor="#f59e0b"
+              title="ZAI-GLM-4.6"
+              description="Enhanced GLM model with 40,960 max tokens"
+              ctaText="Use Model"
+              ctaHref="#zai-glm-4.6"
+              imageUrl="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=300&fit=crop"
+            />
+            
+            <GradientCard
+              gradient="purple"
+              badgeText="131K Context"
+              badgeColor="#8b5cf6"
+              title="DeepSeek-R1"
+              description="Reasoning-optimized model with 8,192 max tokens"
+              ctaText="Use Model"
+              ctaHref="#deepseek-r1"
+              imageUrl="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop"
+            />
+            
+            <GradientCard
+              gradient="green"
+              badgeText="131K Context"
+              badgeColor="#10b981"
+              title="Qwen3-Coder"
+              description="Code-specialized model with 8,192 max tokens"
+              ctaText="Use Model"
+              ctaHref="#qwen3-coder"
+              imageUrl="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop"
+            />
+            
+            <GradientCard
+              gradient="gray"
+              badgeText="131K Context"
+              badgeColor="#6b7280"
+              title="Mistral-Small-24B"
+              description="Efficient Mistral variant with 8,192 max tokens"
+              ctaText="Use Model"
+              ctaHref="#mistral-small-24b"
+              imageUrl="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&h=300&fit=crop"
             />
           </div>
-          <div>
-            <MiniChart />
-          </div>
         </div>
-        
-        <div className="space-y-6 mb-12">
-          <div className="grid gap-4 md:grid-cols-2">
-            <Card className="p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-semibold">Claude 3.5 Sonnet</h3>
-                <Badge>claude-3.5-sonnet</Badge>
-              </div>
-              <p className="text-muted-foreground text-sm mb-3">
-                Anthropic's latest model with enhanced reasoning, coding, and analysis capabilities.
-              </p>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="h-4 w-4 text-green-600" />
-                <span>200K context • Advanced reasoning • Code generation</span>
-              </div>
-            </Card>
 
-            <Card className="p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-semibold">GPT-4 Turbo</h3>
-                <Badge>gpt-4-turbo</Badge>
-              </div>
-              <p className="text-muted-foreground text-sm mb-3">
-                OpenAI's most capable model with broad knowledge and strong performance across domains.
-              </p>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="h-4 w-4 text-green-600" />
-                <span>128K context • Multimodal • JSON mode</span>
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-semibold">Gemini Pro</h3>
-                <Badge>gemini-pro</Badge>
-              </div>
-              <p className="text-muted-foreground text-sm mb-3">
-                Google's advanced model optimized for complex reasoning and multilingual tasks.
-              </p>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="h-4 w-4 text-green-600" />
-                <span>32K context • Multilingual • Fast inference</span>
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-semibold">Moonshot Kimi</h3>
-                <Badge>kimi</Badge>
-              </div>
-              <p className="text-muted-foreground text-sm mb-3">
-                High-performance model with excellent Chinese language support and long context.
-              </p>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="h-4 w-4 text-green-600" />
-                <span>128K context • Chinese + English • Cost-effective</span>
-              </div>
-            </Card>
+        {/* Local-Hosted Models Section */}
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-8">
+            <Cpu className="h-6 w-6 text-purple-600" />
+            <div>
+              <h3 className="text-2xl font-semibold">Local-Hosted Models</h3>
+              <p className="text-muted-foreground">These models run on local infrastructure and may have variable availability</p>
+            </div>
+          </div>
+          
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <GradientCard
+              gradient="orange"
+              badgeText="8K Context"
+              badgeColor="#f59e0b"
+              title="Qwen3-Local"
+              description="Alibaba Cloud model with 8,192 max tokens"
+              ctaText="Use Model"
+              ctaHref="#qwen3-local"
+              imageUrl="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=300&fit=crop"
+            />
+            
+            <GradientCard
+              gradient="purple"
+              badgeText="8K Context"
+              badgeColor="#8b5cf6"
+              title="GLM-4.6"
+              description="Zhipu AI model with 8,192 max tokens"
+              ctaText="Use Model"
+              ctaHref="#glm-4.6"
+              imageUrl="https://images.unsplash.com/photo-1639322537228-f710d846310a?w=400&h=300&fit=crop"
+            />
           </div>
         </div>
 
