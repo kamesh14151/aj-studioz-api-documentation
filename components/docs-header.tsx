@@ -1,8 +1,9 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Search, Menu } from "lucide-react"
+import { Menu } from "lucide-react"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
+import { DocsSearchBar } from "@/components/docs-search-bar"
 
 export function DocsHeader() {
 
@@ -36,17 +37,12 @@ export function DocsHeader() {
         </div>
 
         <div className="ml-auto flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="hidden md:flex gap-2 text-sm text-muted-foreground hover:text-foreground h-9 px-3"
-          >
-            <Search className="h-4 w-4" />
-            <span>Search</span>
-            <kbd className="pointer-events-none hidden h-5 select-none items-center gap-0.5 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-              <span>⌘</span>K
-            </kbd>
-          </Button>          <Button asChild size="sm" variant="default" className="bg-blue-600 hover:bg-blue-700">
+          <div className="hidden md:block">
+            <DocsSearchBar onResultClick={(result) => {
+              // Handle search result click - you can implement navigation logic here
+              console.log('Search result clicked:', result);
+            }} />
+          </div>          <Button asChild size="sm" variant="default" className="bg-blue-600 hover:bg-blue-700">
             <a href="/auth" className="text-white">
               Sign In
             </a>
