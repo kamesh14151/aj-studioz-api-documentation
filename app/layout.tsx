@@ -9,25 +9,62 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://docs.ajstudioz.dev'),
   title: "AJ STUDIOZ & NEXARIQ API Documentation",
   description: "Complete API documentation for AJ STUDIOZ Multi-Model Platform and NEXARIQ Lynxa Pro",
   generator: "v0.app",
+  keywords: ["AJ STUDIOZ", "NEXARIQ", "API", "Documentation", "AI Models", "Multi-Model Platform"],
+  authors: [{ name: "AJ STUDIOZ" }],
+  creator: "AJ STUDIOZ",
+  publisher: "AJ STUDIOZ",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
+        url: "/AJ.svg",
         type: "image/svg+xml",
+      },
+      {
+        url: "/icon-light-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
       },
     ],
     apple: "/apple-icon.png",
+    shortcut: "/AJ.svg",
+  },
+  openGraph: {
+    title: "AJ STUDIOZ & NEXARIQ API Documentation",
+    description: "Complete API documentation for AJ STUDIOZ Multi-Model Platform and NEXARIQ Lynxa Pro",
+    url: "https://docs.ajstudioz.dev",
+    siteName: "AJ STUDIOZ Docs",
+    images: [
+      {
+        url: "/AJ.svg",
+        width: 300,
+        height: 300,
+        alt: "AJ STUDIOZ Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AJ STUDIOZ & NEXARIQ API Documentation",
+    description: "Complete API documentation for AJ STUDIOZ Multi-Model Platform and NEXARIQ Lynxa Pro",
+    images: ["/AJ.svg"],
+    creator: "@ajstudioz",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 }
 

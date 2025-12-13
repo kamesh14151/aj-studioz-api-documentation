@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
 import { DocsSearchBar } from "@/components/docs-search-bar"
+import Image from "next/image"
+import Link from "next/link"
 
 export function DocsHeader() {
 
@@ -15,9 +17,16 @@ export function DocsHeader() {
             <Menu className="h-5 w-5" />
           </Button>
           <div className="flex items-center gap-3">
-            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-foreground text-background">
-              <span className="font-mono text-xs font-bold">AJ</span>
-            </div>
+            <Link href="/docs/getting-started" className="flex items-center justify-center hover:opacity-80 transition-opacity">
+              <Image 
+                src="/AJ.svg" 
+                alt="AJ STUDIOZ Logo" 
+                width={36}
+                height={36}
+                className="h-7 w-7 sm:h-9 sm:w-9 object-contain"
+                priority
+              />
+            </Link>
             <div className="hidden sm:flex items-center gap-4">
               <span className="text-base font-semibold">Docs</span>
               <div className="h-4 w-px bg-border" />
