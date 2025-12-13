@@ -29,6 +29,7 @@ const navigation = [
       { title: "Available Models", href: "/docs/aj-studioz-api/models" },
       { title: "API Endpoints", href: "/docs/aj-studioz-api/endpoints" },
       { title: "Code Examples", href: "/docs/aj-studioz-api/examples" },
+      { title: "Where is Hosted", href: "/docs/aj-studioz-api/hosting" },
     ],
   },
   {

@@ -283,26 +283,9 @@ curl -X GET "https://api.ajstudioz.dev/api/models" \\
           </div>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6 mt-16">Global Infrastructure</h2>
-        
-        <div className="mb-12">
-          <p className="text-muted-foreground mb-8 leading-relaxed">
-            AJ STUDIOZ operates from multiple regions worldwide to ensure low-latency access and high availability 
-            for users across the globe. Our infrastructure is designed for performance and reliability.
-          </p>
-          <LocationMap 
-            locations={[
-              { name: "US East", coordinates: [40.7128, -74.0060], color: "#3b82f6" },
-              { name: "US West", coordinates: [37.7749, -122.4194], color: "#10b981" },
-              { name: "Europe", coordinates: [51.5074, -0.1278], color: "#8b5cf6" },
-              { name: "Asia Pacific", coordinates: [35.6762, 139.6503], color: "#f59e0b" }
-            ]}
-          />
-        </div>
-
         <h2 className="text-3xl font-semibold mb-6">What's Next?</h2>
         
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <Card className="p-6 border-blue-200 dark:border-blue-800">
             <div className="flex items-center gap-3 mb-4">
               <ArrowRight className="h-5 w-5 text-blue-600 dark:text-blue-400" />
@@ -348,6 +331,22 @@ curl -X GET "https://api.ajstudioz.dev/api/models" \\
               className="text-purple-600 hover:text-purple-700 text-sm font-medium"
             >
               View Examples →
+            </a>
+          </Card>
+
+          <Card className="p-6 border-orange-200 dark:border-orange-800">
+            <div className="flex items-center gap-3 mb-4">
+              <ArrowRight className="h-5 w-5 text-orange-600 dark:text-orange-400" />
+              <h3 className="text-lg font-semibold">Global Infrastructure</h3>
+            </div>
+            <p className="text-muted-foreground mb-4 text-sm">
+              Learn about our worldwide hosting infrastructure and regional availability.
+            </p>
+            <a 
+              href="/docs/aj-studioz-api/hosting" 
+              className="text-orange-600 hover:text-orange-700 text-sm font-medium"
+            >
+              Where is Hosted →
             </a>
           </Card>
         </div>
