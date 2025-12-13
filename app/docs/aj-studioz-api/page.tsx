@@ -1,10 +1,11 @@
 import { CodeBlock } from "@/components/code-block"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Zap, Code2, Globe, CheckCircle2, ArrowRight } from "lucide-react"
+import { Zap, Code2, Globe, CheckCircle2, ArrowRight, Server, Cpu } from "lucide-react"
 import { AnimatedFolder } from "@/components/3d-folder"
 import { MiniChart } from "@/components/mini-chart"
 import { LocationMap } from "@/components/expand-map"
+import { GradientCard } from "@/components/gradient-card"
 
 export default function AjStudiozApiPage() {
   return (
@@ -60,7 +61,7 @@ export default function AjStudiozApiPage() {
         {/* Cloud-Hosted Models Section */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <Cloud className="h-6 w-6 text-blue-600" />
+            <Server className="h-6 w-6 text-blue-600" />
             <div>
               <h3 className="text-2xl font-semibold">Cloud-Hosted Models (24/7)</h3>
               <p className="text-muted-foreground">Our cloud infrastructure hosts the following models with guaranteed uptime</p>
