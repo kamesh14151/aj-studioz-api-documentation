@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"; // Your shadcn/ui utility for merging classes
 
 // Define variants for the card's overall style using cva
 const cardVariants = cva(
-  "relative flex flex-col justify-between h-full w-full overflow-hidden rounded-2xl p-8 shadow-sm transition-shadow duration-300 hover:shadow-lg",
+  "relative flex flex-col justify-between h-full w-full overflow-hidden rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm transition-shadow duration-300 hover:shadow-lg",
   {
     variants: {
       gradient: {
@@ -75,9 +75,9 @@ const GradientCard = React.forwardRef<HTMLDivElement, GradientCardProps>(
           {/* Card Content */}
           <div className="z-10 flex flex-col h-full">
             {/* Badge */}
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-background/50 px-3 py-1 text-sm font-medium text-foreground/80 backdrop-blur-sm w-fit">
+            <div className="mb-3 sm:mb-4 inline-flex items-center gap-2 rounded-full bg-background/50 px-2 sm:px-3 py-1 text-xs sm:text-sm font-medium text-foreground/80 backdrop-blur-sm w-fit">
               <span 
-                className="h-2 w-2 rounded-full" 
+                className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full" 
                 style={{ backgroundColor: badgeColor }}
               />
               {badgeText}
@@ -85,17 +85,17 @@ const GradientCard = React.forwardRef<HTMLDivElement, GradientCardProps>(
 
             {/* Title and Description */}
             <div className="flex-grow">
-              <h3 className="text-2xl font-bold text-foreground mb-2">{title}</h3>
-              <p className="text-foreground/70 max-w-xs">{description}</p>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-2">{title}</h3>
+              <p className="text-sm sm:text-base text-foreground/70">{description}</p>
             </div>
             
             {/* Call to Action Link */}
             <a
               href={ctaHref}
-              className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-foreground"
+              className="group mt-4 sm:mt-6 inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-foreground"
             >
               {ctaText}
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </div>
         </div>

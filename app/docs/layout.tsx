@@ -14,8 +14,8 @@ export default function DocsLayout({
         <DocsSidebar />
         <main className="flex-1 lg:pl-64">
           <div className="mx-auto max-w-[1600px]">
-            <div className="flex gap-12 px-8">
-              <div className="flex-1 py-12 max-w-3xl">
+            <div className="flex flex-col xl:flex-row xl:gap-12 px-4 sm:px-6 lg:px-8">
+              <div className="flex-1 py-6 sm:py-8 lg:py-12 max-w-none xl:max-w-3xl">
                 {children}
               </div>
               <TableOfContents />

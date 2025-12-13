@@ -6,22 +6,22 @@ export default function CodeExamplesPage() {
   return (
     <>
       <section>
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">Code Examples</h1>
-          <p className="text-xl text-muted-foreground">
+        <div className="mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Code Examples</h1>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground">
             Complete code examples to get you started with the AJ STUDIOZ API in multiple programming languages.
           </p>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6">Quick Start Example</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Quick Start Example</h2>
         
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           <div>
-            <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-              <Code className="h-6 w-6" />
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-3 sm:mb-4 flex items-center gap-2">
+              <Code className="h-5 w-5 sm:h-6 sm:w-6" />
               Python with OpenAI SDK
             </h3>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               The easiest way to get started is using the official OpenAI Python library. Just change the base URL and you're ready to go!
             </p>
             <CodeBlock

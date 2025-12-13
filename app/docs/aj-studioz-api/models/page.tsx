@@ -6,25 +6,25 @@ import { GradientCard } from "@/components/gradient-card"
 export default function ModelsPage() {
   return (
     <>
-      <section className="mb-20">
-        <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">AJ STUDIOZ API</p>
-        <h1 className="text-5xl font-bold mb-6">Available Models</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+      <section className="mb-12 sm:mb-16 lg:mb-20">
+        <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">AJ STUDIOZ API</p>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Available Models</h1>
+        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
           Access a comprehensive collection of state-of-the-art AI models through our unified API. 
           Choose from cloud-hosted models with guaranteed uptime or local-hosted models for specialized needs.
         </p>
         
         {/* Cloud-Hosted Models Section */}
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-8">
-            <Cloud className="h-6 w-6 text-blue-600" />
+        <div className="mb-12 sm:mb-16">
+          <div className="flex items-center gap-3 mb-6 sm:mb-8">
+            <Cloud className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
             <div>
-              <h2 className="text-2xl font-semibold">Cloud-Hosted Models (24/7)</h2>
-              <p className="text-muted-foreground">Our cloud infrastructure hosts the following models with guaranteed uptime</p>
+              <h2 className="text-xl sm:text-2xl font-semibold">Cloud-Hosted Models (24/7)</h2>
+              <p className="text-sm sm:text-base text-muted-foreground">Our cloud infrastructure hosts the following models with guaranteed uptime</p>
             </div>
           </div>
           
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <GradientCard
               gradient="purple"
               badgeText="262K Context"
