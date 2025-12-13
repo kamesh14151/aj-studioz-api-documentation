@@ -46,8 +46,11 @@ export function DocsHeader() {
             <kbd className="pointer-events-none hidden h-5 select-none items-center gap-0.5 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
               <span>⌘</span>K
             </kbd>
-          </Button>
-          <ThemeToggle />
+          </Button>          <Button asChild size="sm" variant="default" className="bg-blue-600 hover:bg-blue-700">
+            <a href="/auth" className="text-white">
+              Sign In
+            </a>
+          </Button>          <ThemeToggle />
         </div>
       </div>
     </header>
