@@ -5,7 +5,7 @@ import { ArrowRight, Code, Terminal, FileText } from "lucide-react"
 export default function CodeExamplesPage() {
   return (
     <>
-      <section>
+      <section className="mb-12 sm:mb-16 lg:mb-20 overflow-x-hidden">
         <div className="mb-6 sm:mb-8">
           <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">AJ STUDIOZ API</p>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Code Examples</h1>
@@ -25,9 +25,10 @@ export default function CodeExamplesPage() {
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               The easiest way to get started is using the official OpenAI Python library. Just change the base URL and you're ready to go!
             </p>
-            <CodeBlock
-              language="python"
-              code={`from openai import OpenAI
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="python"
+                code={`from openai import OpenAI
 
 # Initialize client
 client = OpenAI(
@@ -56,7 +57,8 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)`}
-            />
+              />
+            </div>
           </div>
 
           <div>
@@ -107,9 +109,10 @@ chatWithAI().catch(console.error);`}
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Direct HTTP requests using cURL for testing or shell scripting.
             </p>
-            <CodeBlock
-              language="bash"
-              code={`curl -X POST https://api.ajstudioz.dev/api/v1/chat/completions \\
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="bash"
+                code={`curl -X POST https://api.ajstudioz.dev/api/v1/chat/completions \\
   -H "Content-Type: application/json" \\
   -H "Authorization: Bearer aj-demo123456789abcdef" \\
   -d '{
@@ -123,7 +126,8 @@ chatWithAI().catch(console.error);`}
     "max_tokens": 100,
     "temperature": 0.7
   }'`}
-            />
+              />
+            </div>
           </div>
         </div>
 
@@ -135,9 +139,10 @@ chatWithAI().catch(console.error);`}
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Get real-time streaming responses for better user experience in chat applications.
             </p>
-            <CodeBlock
-              language="python"
-              code={`from openai import OpenAI
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="python"
+                code={`from openai import OpenAI
 
 client = OpenAI(
     api_key="your-api-key",
@@ -159,7 +164,8 @@ for chunk in stream:
         print(chunk.choices[0].delta.content, end="")
 
 print("\\n")  # New line after streaming is complete`}
-            />
+              />
+            </div>
           </div>
 
           <div>
@@ -167,9 +173,10 @@ print("\\n")  # New line after streaming is complete`}
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Robust error handling for production applications.
             </p>
-            <CodeBlock
-              language="python"
-              code={`from openai import OpenAI
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="python"
+                code={`from openai import OpenAI
 import time
 from typing import Optional
 
@@ -222,7 +229,8 @@ if result:
     print(result)
 else:
     print("Failed to get response")`}
-            />
+              />
+            </div>
           </div>
 
           <div>
@@ -230,9 +238,10 @@ else:
             <p className="text-muted-foreground mb-4">
               Compare responses from different models for the same prompt.
             </p>
-            <CodeBlock
-              language="javascript"
-              code={`import OpenAI from 'openai';
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="javascript"
+                code={`import OpenAI from 'openai';
 
 const openai = new OpenAI({
   apiKey: 'your-api-key',
@@ -277,11 +286,12 @@ async function compareModels(prompt) {
 
 // Usage
 compareModels("Explain quantum computing in simple terms");`}
-            />
+              />
+            </div>
           </div>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 sm:mt-16 grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-3">
           <Card className="p-6 border-blue-200 dark:border-blue-800">
             <div className="flex items-center gap-3 mb-4">
               <ArrowRight className="h-5 w-5 text-blue-600 dark:text-blue-400" />

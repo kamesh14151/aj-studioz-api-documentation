@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 export default function ApiEndpointsPage() {
   return (
     <>
-      <section className="mb-12 sm:mb-16 lg:mb-20">
+      <section className="mb-12 sm:mb-16 lg:mb-20 overflow-x-hidden">
         <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">AJ STUDIOZ API</p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">API Endpoints</h1>
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
@@ -16,8 +16,8 @@ export default function ApiEndpointsPage() {
         <div className="space-y-6 sm:space-y-8">
           <div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Base URL</h2>
-            <div className="bg-muted/50 border rounded-lg p-4">
-              <code className="text-sm">https://api.ajstudioz.dev/api</code>
+            <div className="bg-muted/50 border rounded-lg p-3 sm:p-4 overflow-x-auto">
+              <code className="text-xs sm:text-sm whitespace-nowrap">https://api.ajstudioz.dev/api</code>
             </div>
           </div>
 
@@ -26,12 +26,14 @@ export default function ApiEndpointsPage() {
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               All API requests require authentication using your API key in the request headers.
             </p>
-            <CodeBlock
-              language="bash"
-              code={`# Include your API key in the request headers
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="bash"
+                code={`# Include your API key in the request headers
 curl -H "X-API-Key: your-api-key-here" \\
      -H "Authorization: Bearer your-api-key-here"  # Alternative format`}
-            />
+              />
+            </div>
           </div>
 
           <div>
@@ -39,9 +41,10 @@ curl -H "X-API-Key: your-api-key-here" \\
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Create chat completions using any available model with OpenAI-compatible format.
             </p>
-            <CodeBlock
-              language="bash"
-              code={`POST /chat/completions
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="bash"
+                code={`POST /chat/completions
 
 curl -X POST "https://api.ajstudioz.dev/api/chat/completions" \\
   -H "Content-Type: application/json" \\
@@ -55,14 +58,15 @@ curl -X POST "https://api.ajstudioz.dev/api/chat/completions" \\
     "max_tokens": 1000,
     "temperature": 0.7
   }'`}
-            />
+              />
+            </div>
 
             <div className="mt-6 sm:mt-8">
               <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Request Parameters</h3>
               <div className="space-y-4">
                 <Card className="p-4">
                   <div className="grid gap-4">
-                    <div className="hidden sm:grid grid-cols-3 gap-4 font-medium text-sm border-b pb-2">
+                    <div className="hidden md:grid grid-cols-3 gap-2 sm:gap-4 font-medium text-xs sm:text-sm border-b pb-2">
                       <span>Parameter</span>
                       <span>Type</span>
                       <span>Description</span>
@@ -103,9 +107,10 @@ curl -X POST "https://api.ajstudioz.dev/api/chat/completions" \\
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Get a list of all available models and their capabilities.
             </p>
-            <CodeBlock
-              language="bash"
-              code={`GET /models
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="bash"
+                code={`GET /models
 
 curl -X GET "https://api.ajstudioz.dev/api/models" \\
   -H "X-API-Key: your-api-key"
@@ -133,7 +138,8 @@ curl -X GET "https://api.ajstudioz.dev/api/models" \\
     }
   ]
 }`}
-            />
+              />
+            </div>
           </div>
 
           <div>
@@ -141,9 +147,10 @@ curl -X GET "https://api.ajstudioz.dev/api/models" \\
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               All responses follow OpenAI's standard format for maximum compatibility.
             </p>
-            <CodeBlock
-              language="json"
-              code={`{
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="json"
+                code={`{
   "id": "chatcmpl-abc123",
   "object": "chat.completion",
   "created": 1677652288,
@@ -164,7 +171,8 @@ curl -X GET "https://api.ajstudioz.dev/api/models" \\
     "total_tokens": 25
   }
 }`}
-            />
+              />
+            </div>
           </div>
 
           <div>

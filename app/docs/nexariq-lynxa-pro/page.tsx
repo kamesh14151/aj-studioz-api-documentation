@@ -6,7 +6,7 @@ import { Brain, Zap, Target, Shield, ArrowRight, CheckCircle2 } from "lucide-rea
 export default function NexariqPage() {
   return (
     <>
-      <section className="mb-12 sm:mb-16 lg:mb-20">
+      <section className="mb-12 sm:mb-16 lg:mb-20 overflow-x-hidden">
         <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">NEXARIQ Lynxa Pro</p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Overview</h1>
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
@@ -14,7 +14,7 @@ export default function NexariqPage() {
           analysis, and professional workflows. Built for users who need advanced AI capabilities with enhanced performance.
         </p>
 
-        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-8 sm:mb-10 lg:mb-12">
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-8 sm:mb-10 lg:mb-12">
           <Card className="p-4 sm:p-6">
             <div className="flex items-center gap-3 mb-3 sm:mb-4">
               <div className="p-2 rounded-lg bg-purple-100 dark:bg-purple-900/20">

@@ -6,7 +6,7 @@ import { AlertTriangle, Key, Shield, Eye, EyeOff } from "lucide-react"
 export default function AuthenticationPage() {
   return (
     <>
-      <section className="mb-12 sm:mb-16 lg:mb-20">
+      <section className="mb-12 sm:mb-16 lg:mb-20 overflow-x-hidden">
         <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">Key Information</p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Authentication</h1>
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
@@ -14,8 +14,8 @@ export default function AuthenticationPage() {
           optimized for their specific use cases and security requirements.
         </p>
 
-        <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-1 md:grid-cols-2 mb-8 sm:mb-10 lg:mb-12">
-          <Card className="p-6 border-blue-200 dark:border-blue-800">
+        <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 mb-8 sm:mb-10 lg:mb-12">
+          <Card className="p-4 sm:p-6 border-blue-200 dark:border-blue-800">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/20">
                 <Key className="h-5 w-5 text-blue-600 dark:text-blue-400" />
@@ -30,7 +30,7 @@ export default function AuthenticationPage() {
             </p>
           </Card>
 
-          <Card className="p-6 border-purple-200 dark:border-purple-800">
+          <Card className="p-4 sm:p-6 border-purple-200 dark:border-purple-800">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-purple-100 dark:bg-purple-900/20">
                 <Shield className="h-5 w-5 text-purple-600 dark:text-purple-400" />

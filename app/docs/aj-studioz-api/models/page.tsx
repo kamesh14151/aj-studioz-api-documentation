@@ -6,7 +6,7 @@ import { GradientCard } from "@/components/gradient-card"
 export default function ModelsPage() {
   return (
     <>
-      <section className="mb-12 sm:mb-16 lg:mb-20">
+      <section className="mb-12 sm:mb-16 lg:mb-20 overflow-x-hidden">
         <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">AJ STUDIOZ API</p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Available Models</h1>
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
@@ -24,7 +24,7 @@ export default function ModelsPage() {
             </div>
           </div>
           
-          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             <GradientCard
               gradient="purple"
               badgeText="262K Context"

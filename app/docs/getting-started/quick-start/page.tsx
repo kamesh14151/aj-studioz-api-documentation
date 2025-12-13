@@ -6,15 +6,15 @@ import { Zap, Code2, Key, PlayCircle } from "lucide-react"
 export default function QuickStartPage() {
   return (
     <>
-      <section className="mb-12 sm:mb-16 lg:mb-20">
+      <section className="mb-12 sm:mb-16 lg:mb-20 overflow-x-hidden">
         <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">Getting Started</p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">The Hitchhiker's Guide</h1>
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
           Get started with AJ STUDIOZ APIs in minutes. Choose your platform and start building with cutting-edge AI models.
         </p>
 
-        <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-1 md:grid-cols-2 mb-8 sm:mb-10 lg:mb-12">
-          <Card className="p-6 border-blue-200 dark:border-blue-800">
+        <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 mb-8 sm:mb-10 lg:mb-12">
+          <Card className="p-4 sm:p-6 border-blue-200 dark:border-blue-800">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/20">
                 <Zap className="h-5 w-5 text-blue-600 dark:text-blue-400" />
@@ -29,7 +29,7 @@ export default function QuickStartPage() {
             </p>
           </Card>
 
-          <Card className="p-6 border-purple-200 dark:border-purple-800">
+          <Card className="p-4 sm:p-6 border-purple-200 dark:border-purple-800">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-purple-100 dark:bg-purple-900/20">
                 <Code2 className="h-5 w-5 text-purple-600 dark:text-purple-400" />
@@ -47,7 +47,7 @@ export default function QuickStartPage() {
 
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Quick Start: AJ STUDIOZ Multi-Model</h2>
         
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           <div>
             <div className="flex items-center gap-3 mb-3 sm:mb-4">
               <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white text-xs sm:text-sm font-semibold">1</div>
@@ -56,9 +56,10 @@ export default function QuickStartPage() {
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Try our API immediately with the demo key. Perfect for testing and prototyping.
             </p>
-            <CodeBlock
-              language="bash"
-              code={`# Check available models
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="bash"
+                code={`# Check available models
 curl -X GET "https://api.ajstudioz.dev/api/models" \\
   -H "X-API-Key: aj-demo123456789abcdef"
 
@@ -70,7 +71,8 @@ curl -X POST "https://api.ajstudioz.dev/api/chat" \\
     "model": "kimi", 
     "messages": [{"role": "user", "content": "Hello! How are you?"}]
   }'`}
-            />
+              />
+            </div>
           </div>
 
           <div>
@@ -101,9 +103,10 @@ curl -X POST "https://api.ajstudioz.dev/api/chat" \\
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium mb-2">Python with OpenAI SDK</h4>
-                <CodeBlock
-                  language="python"
-                  code={`from openai import OpenAI
+                <div className="overflow-x-auto">
+                  <CodeBlock
+                    language="python"
+                    code={`from openai import OpenAI
 
 client = OpenAI(
     api_key="aj-demo123456789abcdef",
@@ -116,14 +119,16 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)`}
-                />
+                  />
+                </div>
               </div>
 
               <div>
                 <h4 className="font-medium mb-2">JavaScript/TypeScript</h4>
-                <CodeBlock
-                  language="javascript"
-                  code={`import OpenAI from 'openai';
+                <div className="overflow-x-auto">
+                  <CodeBlock
+                    language="javascript"
+                    code={`import OpenAI from 'openai';
 
 const openai = new OpenAI({
   apiKey: 'aj-demo123456789abcdef',
@@ -136,7 +141,8 @@ const response = await openai.chat.completions.create({
 });
 
 console.log(response.choices[0].message.content);`}
-                />
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -153,16 +159,18 @@ console.log(response.choices[0].message.content);`}
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               NEXARIQ requires email-based API key generation for access control.
             </p>
-            <CodeBlock
-              language="bash"
-              code={`# Generate API key
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="bash"
+                code={`# Generate API key
 curl -X POST "https://lynxa-pro-backend.vercel.app/api/keys/generate" \\
   -H "Content-Type: application/json" \\
   -d '{"email": "your-email@example.com"}'
 
 # Response includes your API key
 # {"success": true, "apiKey": "nxq_..."}`}
-            />
+              />
+            </div>
           </div>
 
           <div>
@@ -173,9 +181,10 @@ curl -X POST "https://lynxa-pro-backend.vercel.app/api/keys/generate" \\
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Make your first request to the Lynxa Pro model.
             </p>
-            <CodeBlock
-              language="bash"
-              code={`# Test chat (replace YOUR_API_KEY with your actual key)
+            <div className="overflow-x-auto">
+              <CodeBlock
+                language="bash"
+                code={`# Test chat (replace YOUR_API_KEY with your actual key)
 curl -X POST "https://lynxa-pro-backend.vercel.app/api/lynxa" \\
   -H "Content-Type: application/json" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -183,7 +192,8 @@ curl -X POST "https://lynxa-pro-backend.vercel.app/api/lynxa" \\
     "model": "lynxa-pro", 
     "messages": [{"role": "user", "content": "Explain quantum computing"}]
   }'`}
-            />
+              />
+            </div>
           </div>
         </div>
 
