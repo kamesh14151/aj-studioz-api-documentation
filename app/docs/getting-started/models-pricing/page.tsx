@@ -11,7 +11,7 @@ export default function ModelsPricingPage() {
 
   return (
     <>
-      <section className="mb-12 sm:mb-16 lg:mb-20">
+      <section className="mb-12 sm:mb-16 lg:mb-20 overflow-x-hidden max-w-full">
         <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">Getting started</p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Models and Pricing</h1>
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
@@ -19,7 +19,7 @@ export default function ModelsPricingPage() {
           pay-per-use rates and volume discounts for enterprise customers.
         </p>
 
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 mb-8 sm:mb-12">
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 mb-8 sm:mb-12 max-w-full overflow-x-hidden">
           <div>
             <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">AI Models Hub</h2>
             <p className="text-sm sm:text-base text-muted-foreground mb-6">
@@ -63,11 +63,11 @@ export default function ModelsPricingPage() {
 
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6 text-center">TOP MODELS</h2>
         
-        <div className="mb-8 sm:mb-12">
+        <div className="mb-8 sm:mb-12 overflow-x-hidden max-w-full">
           <ThreeDCard />
         </div>
         
-        <div className="grid gap-4 sm:gap-6 sm:grid-cols-1 lg:grid-cols-3 mb-8 sm:mb-12">
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 mb-8 sm:mb-12 max-w-full overflow-x-hidden">
           <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow border-purple-200 dark:border-purple-800">
             <div className="flex items-center gap-3 mb-3 sm:mb-4">
               <div className="p-2 rounded-lg bg-purple-100 dark:bg-purple-900/20">

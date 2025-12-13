@@ -22,7 +22,7 @@ const PhotoCard = ({ src, alt, rotation, text, index, style = {} }) => {
 
   return (
     <div
-      className="w-[162px] h-[240px] bg-white p-2 rounded-md shadow-2xl cursor-pointer"
+      className="w-[120px] sm:w-[162px] h-[180px] sm:h-[240px] bg-white p-1 sm:p-2 rounded-md shadow-2xl cursor-pointer"
       style={cardStyle}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -124,12 +124,12 @@ export function Component() {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
       <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet" />
 
-      <div className="bg-background min-h-screen flex items-center justify-center w-full p-8 relative">
+      <div className="bg-background min-h-[200px] sm:min-h-[300px] flex items-center justify-center w-full p-4 sm:p-8 relative overflow-hidden">
         
         {/* Animated Grid Background */}
         <AnimatedGrid />
         {/* Photo Cards Container - positioned exactly like your image */}
-        <div className="relative w-[300px] h-[300px] flex items-center justify-center">
+        <div className="relative w-[240px] sm:w-[300px] h-[200px] sm:h-[300px] flex items-center justify-center">
           
           {/* Back Photo Card - rotated left, positioned behind */}
           <PhotoCard

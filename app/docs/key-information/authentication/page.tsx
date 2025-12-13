@@ -6,7 +6,7 @@ import { AlertTriangle, Key, Shield, Eye, EyeOff } from "lucide-react"
 export default function AuthenticationPage() {
   return (
     <>
-      <section className="mb-12 sm:mb-16 lg:mb-20 overflow-x-hidden">
+      <section className="mb-12 sm:mb-16 lg:mb-20 overflow-x-hidden max-w-full w-full">
         <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">Key Information</p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Authentication</h1>
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">

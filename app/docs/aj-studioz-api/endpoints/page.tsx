@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 export default function ApiEndpointsPage() {
   return (
     <>
-      <section className="mb-12 sm:mb-16 lg:mb-20 overflow-x-hidden">
+      <section className="mb-12 sm:mb-16 lg:mb-20 overflow-x-hidden max-w-full w-full">
         <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">AJ STUDIOZ API</p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">API Endpoints</h1>
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
@@ -65,36 +65,89 @@ curl -X POST "https://api.ajstudioz.dev/api/chat/completions" \\
               <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Request Parameters</h3>
               <div className="space-y-4">
                 <Card className="p-4">
-                  <div className="grid gap-4">
+                  <div className="space-y-4">
                     <div className="hidden md:grid grid-cols-3 gap-2 sm:gap-4 font-medium text-xs sm:text-sm border-b pb-2">
                       <span>Parameter</span>
                       <span>Type</span>
                       <span>Description</span>
                     </div>
-                    <div className="grid grid-cols-3 gap-4 text-sm">
-                      <code className="text-blue-600">model</code>
-                      <span>string</span>
-                      <span>Model to use for completion (e.g., "claude-3.5-sonnet")</span>
-                    </div>
-                    <div className="grid grid-cols-3 gap-4 text-sm">
-                      <code className="text-blue-600">messages</code>
-                      <span>array</span>
-                      <span>Array of message objects with role and content</span>
-                    </div>
-                    <div className="grid grid-cols-3 gap-4 text-sm">
-                      <code className="text-blue-600">max_tokens</code>
-                      <span>integer</span>
-                      <span>Maximum tokens to generate (optional)</span>
-                    </div>
-                    <div className="grid grid-cols-3 gap-4 text-sm">
-                      <code className="text-blue-600">temperature</code>
-                      <span>float</span>
-                      <span>Sampling temperature between 0 and 1 (optional)</span>
-                    </div>
-                    <div className="grid grid-cols-3 gap-4 text-sm">
-                      <code className="text-blue-600">stream</code>
-                      <span>boolean</span>
-                      <span>Enable streaming response (optional)</span>
+                    
+                    {/* Mobile: Stack layout, Desktop: Grid layout */}
+                    <div className="space-y-4 md:space-y-0 md:grid md:grid-cols-3 md:gap-4 text-sm">
+                      <div className="md:contents">
+                        <div className="mb-2 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Parameter: </span>
+                          <code className="text-blue-600">model</code>
+                        </div>
+                        <div className="mb-2 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Type: </span>
+                          <span>string</span>
+                        </div>
+                        <div className="mb-4 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Description: </span>
+                          <span>Model to use for completion (e.g., "claude-3.5-sonnet")</span>
+                        </div>
+                      </div>
+                      
+                      <div className="md:contents">
+                        <div className="mb-2 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Parameter: </span>
+                          <code className="text-blue-600">messages</code>
+                        </div>
+                        <div className="mb-2 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Type: </span>
+                          <span>array</span>
+                        </div>
+                        <div className="mb-4 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Description: </span>
+                          <span>Array of message objects with role and content</span>
+                        </div>
+                      </div>
+                      
+                      <div className="md:contents">
+                        <div className="mb-2 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Parameter: </span>
+                          <code className="text-blue-600">max_tokens</code>
+                        </div>
+                        <div className="mb-2 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Type: </span>
+                          <span>integer</span>
+                        </div>
+                        <div className="mb-4 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Description: </span>
+                          <span>Maximum tokens to generate (optional)</span>
+                        </div>
+                      </div>
+                      
+                      <div className="md:contents">
+                        <div className="mb-2 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Parameter: </span>
+                          <code className="text-blue-600">temperature</code>
+                        </div>
+                        <div className="mb-2 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Type: </span>
+                          <span>float</span>
+                        </div>
+                        <div className="mb-4 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Description: </span>
+                          <span>Sampling temperature between 0 and 1 (optional)</span>
+                        </div>
+                      </div>
+                      
+                      <div className="md:contents">
+                        <div className="mb-2 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Parameter: </span>
+                          <code className="text-blue-600">stream</code>
+                        </div>
+                        <div className="mb-2 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Type: </span>
+                          <span>boolean</span>
+                        </div>
+                        <div className="mb-4 md:mb-0">
+                          <span className="text-xs text-muted-foreground md:hidden">Description: </span>
+                          <span>Enable streaming response (optional)</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Card>
@@ -182,36 +235,89 @@ curl -X GET "https://api.ajstudioz.dev/api/models" \\
             </p>
             <div className="space-y-4">
               <Card className="p-4">
-                <div className="grid gap-4">
+                <div className="space-y-4">
                   <div className="hidden sm:grid grid-cols-3 gap-4 font-medium text-sm border-b pb-2">
                     <span>Status Code</span>
                     <span>Error Type</span>
                     <span>Description</span>
                   </div>
-                  <div className="grid grid-cols-3 gap-4 text-sm">
-                    <Badge variant="outline">200</Badge>
-                    <span>Success</span>
-                    <span>Request completed successfully</span>
-                  </div>
-                  <div className="grid grid-cols-3 gap-4 text-sm">
-                    <Badge variant="destructive">400</Badge>
-                    <span>Bad Request</span>
-                    <span>Invalid request parameters</span>
-                  </div>
-                  <div className="grid grid-cols-3 gap-4 text-sm">
-                    <Badge variant="destructive">401</Badge>
-                    <span>Unauthorized</span>
-                    <span>Invalid or missing API key</span>
-                  </div>
-                  <div className="grid grid-cols-3 gap-4 text-sm">
-                    <Badge variant="destructive">429</Badge>
-                    <span>Rate Limited</span>
-                    <span>Too many requests</span>
-                  </div>
-                  <div className="grid grid-cols-3 gap-4 text-sm">
-                    <Badge variant="destructive">500</Badge>
-                    <span>Server Error</span>
-                    <span>Internal server error</span>
+                  
+                  {/* Mobile: Card layout, Desktop: Grid layout */}
+                  <div className="space-y-3 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-4 text-sm">
+                    <div className="flex flex-col space-y-1 sm:contents">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-muted-foreground sm:hidden">Status:</span>
+                        <Badge variant="outline">200</Badge>
+                      </div>
+                      <div className="flex items-center gap-2 sm:block">
+                        <span className="text-xs text-muted-foreground sm:hidden">Type:</span>
+                        <span>Success</span>
+                      </div>
+                      <div className="flex items-start gap-2 sm:block">
+                        <span className="text-xs text-muted-foreground sm:hidden">Description:</span>
+                        <span>Request completed successfully</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-col space-y-1 sm:contents">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-muted-foreground sm:hidden">Status:</span>
+                        <Badge variant="destructive">400</Badge>
+                      </div>
+                      <div className="flex items-center gap-2 sm:block">
+                        <span className="text-xs text-muted-foreground sm:hidden">Type:</span>
+                        <span>Bad Request</span>
+                      </div>
+                      <div className="flex items-start gap-2 sm:block">
+                        <span className="text-xs text-muted-foreground sm:hidden">Description:</span>
+                        <span>Invalid request parameters</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-col space-y-1 sm:contents">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-muted-foreground sm:hidden">Status:</span>
+                        <Badge variant="destructive">401</Badge>
+                      </div>
+                      <div className="flex items-center gap-2 sm:block">
+                        <span className="text-xs text-muted-foreground sm:hidden">Type:</span>
+                        <span>Unauthorized</span>
+                      </div>
+                      <div className="flex items-start gap-2 sm:block">
+                        <span className="text-xs text-muted-foreground sm:hidden">Description:</span>
+                        <span>Invalid or missing API key</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-col space-y-1 sm:contents">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-muted-foreground sm:hidden">Status:</span>
+                        <Badge variant="destructive">429</Badge>
+                      </div>
+                      <div className="flex items-center gap-2 sm:block">
+                        <span className="text-xs text-muted-foreground sm:hidden">Type:</span>
+                        <span>Rate Limited</span>
+                      </div>
+                      <div className="flex items-start gap-2 sm:block">
+                        <span className="text-xs text-muted-foreground sm:hidden">Description:</span>
+                        <span>Too many requests</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-col space-y-1 sm:contents">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-muted-foreground sm:hidden">Status:</span>
+                        <Badge variant="destructive">500</Badge>
+                      </div>
+                      <div className="flex items-center gap-2 sm:block">
+                        <span className="text-xs text-muted-foreground sm:hidden">Type:</span>
+                        <span>Server Error</span>
+                      </div>
+                      <div className="flex items-start gap-2 sm:block">
+                        <span className="text-xs text-muted-foreground sm:hidden">Description:</span>
+                        <span>Internal server error</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Card>
