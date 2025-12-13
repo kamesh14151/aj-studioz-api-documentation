@@ -33,16 +33,6 @@ const navigation = [
       { title: "Where is Hosted", href: "/docs/aj-studioz-api/hosting" },
     ],
   },
-  {
-    title: "NEXARIQ Lynxa Pro",
-    items: [
-      { title: "Overview", href: "/docs/nexariq-lynxa-pro" },
-      { title: "Model Specifications", href: "/docs/nexariq-lynxa-pro/specifications" },
-      { title: "API Endpoints", href: "/docs/nexariq-lynxa-pro/endpoints" },
-      { title: "Generate API Key", href: "/docs/nexariq-lynxa-pro/generate-key" },
-      { title: "Usage Examples", href: "/docs/nexariq-lynxa-pro/examples" },
-    ],
-  },
 ]
 
 export function DocsSidebar() {
