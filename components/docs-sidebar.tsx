@@ -21,10 +21,6 @@ const navigation = [
     title: "Key Information",
     items: [
       { title: "Authentication", href: "/docs/key-information/authentication" },
-      { title: "Sign In / Sign Up", href: "/docs/auth" },
-      { title: "Manage Billing", href: "/docs/key-information/billing" },
-      { title: "Consumption and Rate Limits", href: "/docs/key-information/rate-limits" },
-      { title: "Regional Endpoints", href: "/docs/key-information/endpoints" },
     ],
   },
   {
@@ -44,15 +40,6 @@ const navigation = [
       { title: "API Endpoints", href: "/docs/nexariq-lynxa-pro/endpoints" },
       { title: "Generate API Key", href: "/docs/nexariq-lynxa-pro/generate-key" },
       { title: "Usage Examples", href: "/docs/nexariq-lynxa-pro/examples" },
-    ],
-  },
-  {
-    title: "Guides",
-    items: [
-      { title: "Comparison Guide", href: "/docs/guides/comparison" },
-      { title: "Best Practices", href: "/docs/guides/best-practices" },
-      { title: "Tool Use", href: "/docs/guides/tool-use" },
-      { title: "Images", href: "/docs/guides/images" },
     ],
   },
 ]
