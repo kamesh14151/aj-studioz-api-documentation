@@ -5,25 +5,25 @@ import { Badge } from "@/components/ui/badge"
 export default function ApiEndpointsPage() {
   return (
     <>
-      <section className="mb-20">
-        <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">AJ STUDIOZ API</p>
-        <h1 className="text-5xl font-bold mb-6">API Endpoints</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+      <section className="mb-12 sm:mb-16 lg:mb-20">
+        <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">AJ STUDIOZ API</p>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">API Endpoints</h1>
+        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
           Complete reference for all AJ STUDIOZ API endpoints. Our API is fully OpenAI-compatible, 
           making it easy to integrate with existing tools and libraries.
         </p>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           <div>
-            <h2 className="text-3xl font-semibold mb-6">Base URL</h2>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Base URL</h2>
             <div className="bg-muted/50 border rounded-lg p-4">
               <code className="text-sm">https://api.ajstudioz.dev/api</code>
             </div>
           </div>
 
           <div>
-            <h2 className="text-3xl font-semibold mb-6">Authentication</h2>
-            <p className="text-muted-foreground mb-4">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Authentication</h2>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               All API requests require authentication using your API key in the request headers.
             </p>
             <CodeBlock
@@ -35,8 +35,8 @@ curl -H "X-API-Key: your-api-key-here" \\
           </div>
 
           <div>
-            <h2 className="text-3xl font-semibold mb-6">Chat Completions</h2>
-            <p className="text-muted-foreground mb-4">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Chat Completions</h2>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Create chat completions using any available model with OpenAI-compatible format.
             </p>
             <CodeBlock
@@ -57,12 +57,12 @@ curl -X POST "https://api.ajstudioz.dev/api/chat/completions" \\
   }'`}
             />
 
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">Request Parameters</h3>
+            <div className="mt-6 sm:mt-8">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Request Parameters</h3>
               <div className="space-y-4">
                 <Card className="p-4">
                   <div className="grid gap-4">
-                    <div className="grid grid-cols-3 gap-4 font-medium text-sm border-b pb-2">
+                    <div className="hidden sm:grid grid-cols-3 gap-4 font-medium text-sm border-b pb-2">
                       <span>Parameter</span>
                       <span>Type</span>
                       <span>Description</span>
@@ -99,8 +99,8 @@ curl -X POST "https://api.ajstudioz.dev/api/chat/completions" \\
           </div>
 
           <div>
-            <h2 className="text-3xl font-semibold mb-6">List Models</h2>
-            <p className="text-muted-foreground mb-4">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">List Models</h2>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Get a list of all available models and their capabilities.
             </p>
             <CodeBlock
@@ -137,8 +137,8 @@ curl -X GET "https://api.ajstudioz.dev/api/models" \\
           </div>
 
           <div>
-            <h2 className="text-3xl font-semibold mb-6">Response Format</h2>
-            <p className="text-muted-foreground mb-4">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Response Format</h2>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               All responses follow OpenAI's standard format for maximum compatibility.
             </p>
             <CodeBlock
@@ -168,14 +168,14 @@ curl -X GET "https://api.ajstudioz.dev/api/models" \\
           </div>
 
           <div>
-            <h2 className="text-3xl font-semibold mb-6">Error Handling</h2>
-            <p className="text-muted-foreground mb-4">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Error Handling</h2>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               The API uses standard HTTP response codes to indicate success or failure.
             </p>
             <div className="space-y-4">
               <Card className="p-4">
                 <div className="grid gap-4">
-                  <div className="grid grid-cols-3 gap-4 font-medium text-sm border-b pb-2">
+                  <div className="hidden sm:grid grid-cols-3 gap-4 font-medium text-sm border-b pb-2">
                     <span>Status Code</span>
                     <span>Error Type</span>
                     <span>Description</span>

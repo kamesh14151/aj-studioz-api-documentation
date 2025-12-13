@@ -6,15 +6,15 @@ import { AlertTriangle, Key, Shield, Eye, EyeOff } from "lucide-react"
 export default function AuthenticationPage() {
   return (
     <>
-      <section className="mb-20">
-        <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">Key Information</p>
-        <h1 className="text-5xl font-bold mb-6">Authentication</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+      <section className="mb-12 sm:mb-16 lg:mb-20">
+        <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">Key Information</p>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Authentication</h1>
+        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
           Secure access to AJ STUDIOZ APIs using API keys. Our platforms use different authentication methods 
           optimized for their specific use cases and security requirements.
         </p>
 
-        <div className="grid gap-8 md:grid-cols-2 mb-12">
+        <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-1 md:grid-cols-2 mb-8 sm:mb-10 lg:mb-12">
           <Card className="p-6 border-blue-200 dark:border-blue-800">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/20">
@@ -46,11 +46,11 @@ export default function AuthenticationPage() {
           </Card>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6">AJ STUDIOZ Multi-Model Authentication</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">AJ STUDIOZ Multi-Model Authentication</h2>
         
         <div className="space-y-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">API Key Format</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">API Key Format</h3>
             <p className="text-muted-foreground mb-4 leading-relaxed">
               All API requests to AJ STUDIOZ Multi-Model require authentication using an API key in the request headers. 
               Keys follow a specific format for easy identification and security.
@@ -77,8 +77,8 @@ curl -X POST "https://api.ajstudioz.dev/api/chat" \\
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Demo API Key</h3>
-            <p className="text-muted-foreground mb-4">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Demo API Key</h3>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               For testing and development, you can use our demo API key with limited rate limits:
             </p>
             
@@ -95,8 +95,8 @@ curl -X POST "https://api.ajstudioz.dev/api/chat" \\
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Production Keys</h3>
-            <p className="text-muted-foreground mb-4">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Production Keys</h3>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               For production usage, contact our team to get your personal API key with:
             </p>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4 mb-4">
@@ -108,8 +108,8 @@ curl -X POST "https://api.ajstudioz.dev/api/chat" \\
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">SDK Integration</h3>
-            <p className="text-muted-foreground mb-4">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">SDK Integration</h3>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Use with OpenAI-compatible libraries by setting the base URL and API key:
             </p>
 
@@ -160,11 +160,11 @@ curl -X POST "https://api.ajstudioz.dev/api/chat" \\
           </div>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6 mt-16">NEXARIQ Lynxa Pro Authentication</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6 mt-12 sm:mt-16">NEXARIQ Lynxa Pro Authentication</h2>
         
         <div className="space-y-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Bearer Token Authentication</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Bearer Token Authentication</h3>
             <p className="text-muted-foreground mb-4 leading-relaxed">
               NEXARIQ uses standard OAuth 2.0 Bearer token authentication. All API keys start with <code>nxq_</code> 
               for easy identification and security validation.
@@ -184,8 +184,8 @@ curl -X POST "https://lynxa-pro-backend.vercel.app/api/lynxa" \\
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Key Generation</h3>
-            <p className="text-muted-foreground mb-4">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Key Generation</h3>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               NEXARIQ requires email-based API key generation for access control and usage tracking:
             </p>
             
@@ -205,8 +205,8 @@ curl -X POST "https://lynxa-pro-backend.vercel.app/api/keys/generate" \\
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Key Management</h3>
-            <p className="text-muted-foreground mb-4">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Key Management</h3>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Each email address can have one active API key. Generating a new key will invalidate the previous one:
             </p>
             
@@ -219,11 +219,11 @@ curl -X POST "https://lynxa-pro-backend.vercel.app/api/keys/generate" \\
           </div>
         </div>
 
-        <div className="mt-16 p-6 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
+        <div className="mt-12 sm:mt-16 p-4 sm:p-6 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
           <div className="flex items-start gap-3">
             <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
             <div>
-              <h3 className="text-lg font-semibold text-amber-900 dark:text-amber-100 mb-2">Security Best Practices</h3>
+              <h3 className="text-base sm:text-lg font-semibold text-amber-900 dark:text-amber-100 mb-2">Security Best Practices</h3>
               <ul className="text-amber-800 dark:text-amber-200 space-y-1 text-sm">
                 <li>• Never expose API keys in client-side code or public repositories</li>
                 <li>• Use environment variables to store API keys in production</li>

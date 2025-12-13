@@ -7,8 +7,9 @@ export default function CodeExamplesPage() {
     <>
       <section>
         <div className="mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Code Examples</h1>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground">
+          <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">AJ STUDIOZ API</p>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Code Examples</h1>
+          <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
             Complete code examples to get you started with the AJ STUDIOZ API in multiple programming languages.
           </p>
         </div>
@@ -59,11 +60,11 @@ print(response.choices[0].message.content)`}
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-              <Terminal className="h-6 w-6" />
+            <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 flex items-center gap-2">
+              <Terminal className="h-5 w-5 sm:h-6 sm:w-6" />
               JavaScript/TypeScript
             </h3>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Works seamlessly with Node.js, React, Next.js, and other JavaScript frameworks.
             </p>
             <CodeBlock
@@ -99,11 +100,11 @@ chatWithAI().catch(console.error);`}
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-              <FileText className="h-6 w-6" />
+            <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 flex items-center gap-2">
+              <FileText className="h-5 w-5 sm:h-6 sm:w-6" />
               cURL Example
             </h3>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Direct HTTP requests using cURL for testing or shell scripting.
             </p>
             <CodeBlock
@@ -126,12 +127,12 @@ chatWithAI().catch(console.error);`}
           </div>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6 mt-12">Advanced Examples</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6 mt-8 sm:mt-12">Advanced Examples</h2>
         
         <div className="space-y-8">
           <div>
-            <h3 className="text-2xl font-semibold mb-4">Streaming Responses</h3>
-            <p className="text-muted-foreground mb-4">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Streaming Responses</h3>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Get real-time streaming responses for better user experience in chat applications.
             </p>
             <CodeBlock
@@ -162,8 +163,8 @@ print("\\n")  # New line after streaming is complete`}
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold mb-4">Error Handling</h3>
-            <p className="text-muted-foreground mb-4">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Error Handling</h3>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Robust error handling for production applications.
             </p>
             <CodeBlock

@@ -6,14 +6,14 @@ import { Zap, Code2, Key, PlayCircle } from "lucide-react"
 export default function QuickStartPage() {
   return (
     <>
-      <section className="mb-20">
-        <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">Getting started</p>
-        <h1 className="text-5xl font-bold mb-6">The Hitchhiker's Guide to AJ STUDIOZ</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+      <section className="mb-12 sm:mb-16 lg:mb-20">
+        <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">Getting Started</p>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">The Hitchhiker's Guide</h1>
+        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
           Get started with AJ STUDIOZ APIs in minutes. Choose your platform and start building with cutting-edge AI models.
         </p>
 
-        <div className="grid gap-6 md:grid-cols-2 mb-12">
+        <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-1 md:grid-cols-2 mb-8 sm:mb-10 lg:mb-12">
           <Card className="p-6 border-blue-200 dark:border-blue-800">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/20">
@@ -45,15 +45,15 @@ export default function QuickStartPage() {
           </Card>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6">Quick Start: AJ STUDIOZ Multi-Model</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Quick Start: AJ STUDIOZ Multi-Model</h2>
         
         <div className="space-y-8">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white text-sm font-semibold">1</div>
-              <h3 className="text-xl font-semibold">Test with Demo Key</h3>
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+              <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white text-xs sm:text-sm font-semibold">1</div>
+              <h3 className="text-lg sm:text-xl font-semibold">Test with Demo Key</h3>
             </div>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Try our API immediately with the demo key. Perfect for testing and prototyping.
             </p>
             <CodeBlock
@@ -74,11 +74,11 @@ curl -X POST "https://api.ajstudioz.dev/api/chat" \\
           </div>
 
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white text-sm font-semibold">2</div>
-              <h3 className="text-xl font-semibold">Get Your API Key</h3>
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+              <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white text-xs sm:text-sm font-semibold">2</div>
+              <h3 className="text-lg sm:text-xl font-semibold">Get Your API Key</h3>
             </div>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Ready for production? Get your personal API key for full access and billing control.
             </p>
             <div className="bg-muted/50 border rounded-lg p-4">
@@ -90,11 +90,11 @@ curl -X POST "https://api.ajstudioz.dev/api/chat" \\
           </div>
 
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white text-sm font-semibold">3</div>
-              <h3 className="text-xl font-semibold">Use with OpenAI Libraries</h3>
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+              <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-600 text-white text-xs sm:text-sm font-semibold">3</div>
+              <h3 className="text-lg sm:text-xl font-semibold">Use with OpenAI Libraries</h3>
             </div>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Drop-in replacement for OpenAI API. Use your existing code and libraries.
             </p>
             
@@ -142,15 +142,15 @@ console.log(response.choices[0].message.content);`}
           </div>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6 mt-16">Quick Start: NEXARIQ Lynxa Pro</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6 mt-12 sm:mt-16">Quick Start: NEXARIQ Lynxa Pro</h2>
         
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-600 text-white text-sm font-semibold">1</div>
-              <h3 className="text-xl font-semibold">Generate API Key</h3>
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+              <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-purple-600 text-white text-xs sm:text-sm font-semibold">1</div>
+              <h3 className="text-lg sm:text-xl font-semibold">Generate API Key</h3>
             </div>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               NEXARIQ requires email-based API key generation for access control.
             </p>
             <CodeBlock
@@ -166,11 +166,11 @@ curl -X POST "https://lynxa-pro-backend.vercel.app/api/keys/generate" \\
           </div>
 
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-600 text-white text-sm font-semibold">2</div>
-              <h3 className="text-xl font-semibold">Test Chat Completion</h3>
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+              <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-purple-600 text-white text-xs sm:text-sm font-semibold">2</div>
+              <h3 className="text-lg sm:text-xl font-semibold">Test Chat Completion</h3>
             </div>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Make your first request to the Lynxa Pro model.
             </p>
             <CodeBlock
@@ -187,24 +187,24 @@ curl -X POST "https://lynxa-pro-backend.vercel.app/api/lynxa" \\
           </div>
         </div>
 
-        <div className="mt-16 p-6 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
+        <div className="mt-12 sm:mt-16 p-4 sm:p-6 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
           <div className="flex items-center gap-3 mb-3">
             <PlayCircle className="h-6 w-6 text-green-600 dark:text-green-400" />
-            <h3 className="text-lg font-semibold text-green-900 dark:text-green-100">You're all set!</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-green-900 dark:text-green-100">You're all set!</h3>
           </div>
           <p className="text-green-800 dark:text-green-200 mb-4">
             Congratulations! You've made your first API calls. Now explore our comprehensive guides and documentation.
           </p>
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <a 
               href="/docs/aj-studioz-api" 
-              className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+              className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-sm sm:text-base bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
             >
               Explore AJ STUDIOZ API →
             </a>
             <a 
               href="/docs/nexariq-lynxa-pro" 
-              className="inline-flex items-center px-4 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors"
+              className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-sm sm:text-base border border-green-600 text-green-600 rounded-md hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors"
             >
               Learn about NEXARIQ →
             </a>
