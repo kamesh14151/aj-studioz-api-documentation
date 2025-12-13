@@ -14,7 +14,6 @@ const navigation = [
       { title: "Introduction", href: "/docs/getting-started/introduction" },
       { title: "The Hitchhiker's Guide to AJ STUDIOZ", href: "/docs/getting-started/quick-start" },
       { title: "Models and Pricing", href: "/docs/getting-started/models-pricing" },
-      { title: "What's New?", href: "/docs/getting-started/whats-new" },
     ],
   },
   {
