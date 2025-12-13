@@ -1,29 +1,12 @@
 "use client"
 
-import { ThreeDCard } from "@/components/3d-card"
+import { LocationMap } from "@/components/expand-map"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, Star, Brain, Zap, Code, Database } from "lucide-react"
 
 export default function ModelsPricingPage() {
-  const cardData = [
-    {
-      src: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop&crop=center",
-      alt: "AI Models Overview",
-      text: "Claude 3.5 Sonnet",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=300&fit=crop&crop=center", 
-      alt: "GPT Models",
-      text: "GPT-4 Turbo",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=300&fit=crop&crop=center",
-      alt: "Gemini Pro",
-      text: "Gemini Pro",
-    },
-  ];
 
   return (
     <>
@@ -37,11 +20,15 @@ export default function ModelsPricingPage() {
 
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 mb-8 sm:mb-12">
           <div>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Explore Our AI Models</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">AI Models Hub</h2>
             <p className="text-sm sm:text-base text-muted-foreground mb-6">
-              Interactive showcase of our premium AI model collection. Hover over the cards to explore different models and their capabilities.
+              Interactive map of our AI model ecosystem. Click to explore our global infrastructure and model capabilities.
             </p>
-            <ThreeDCard cardData={cardData} />
+            <LocationMap 
+              location="AJ STUDIOZ AI Hub" 
+              coordinates="Global Infrastructure" 
+              className="w-full h-64 sm:h-80"
+            />
           </div>
           
           <Card className="p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border-blue-200 dark:border-blue-800">
