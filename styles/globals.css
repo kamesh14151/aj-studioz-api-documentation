@@ -4,16 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Sugar-high syntax highlighting - Light theme */
-  --sh-identifier: oklch(0.35 0.02 250);
-  --sh-keyword: oklch(0.55 0.15 25);
-  --sh-string: oklch(0.50 0.12 160);
-  --sh-class: oklch(0.55 0.14 280);
-  --sh-property: oklch(0.50 0.12 240);
-  --sh-entity: oklch(0.48 0.10 200);
-  --sh-jsxliterals: oklch(0.52 0.13 330);
-  --sh-sign: oklch(0.45 0.03 250);
-  --sh-comment: oklch(0.55 0.02 250);
+  /* Sugar-high syntax highlighting - Light theme - Enhanced for quality */
+  --sh-identifier: oklch(0.35 0.05 250);
+  --sh-keyword: oklch(0.45 0.18 25);
+  --sh-string: oklch(0.45 0.15 160);
+  --sh-class: oklch(0.50 0.16 280);
+  --sh-property: oklch(0.45 0.15 240);
+  --sh-entity: oklch(0.42 0.12 200);
+  --sh-jsxliterals: oklch(0.48 0.16 330);
+  --sh-sign: oklch(0.40 0.08 250);
+  --sh-comment: oklch(0.50 0.05 250);
 
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -51,16 +51,16 @@
 }
 
 .dark {
-  /* Sugar-high syntax highlighting - Dark theme */
-  --sh-identifier: oklch(0.85 0.03 250);
-  --sh-keyword: oklch(0.75 0.12 25);
-  --sh-string: oklch(0.72 0.14 160);
-  --sh-class: oklch(0.78 0.16 280);
-  --sh-property: oklch(0.75 0.14 240);
-  --sh-entity: oklch(0.73 0.12 200);
-  --sh-jsxliterals: oklch(0.76 0.14 330);
-  --sh-sign: oklch(0.70 0.04 250);
-  --sh-comment: oklch(0.55 0.03 250);
+  /* Sugar-high syntax highlighting - Dark theme - Enhanced for quality */
+  --sh-identifier: oklch(0.88 0.08 250);
+  --sh-keyword: oklch(0.78 0.18 25);
+  --sh-string: oklch(0.75 0.18 160);
+  --sh-class: oklch(0.82 0.20 280);
+  --sh-property: oklch(0.78 0.18 240);
+  --sh-entity: oklch(0.76 0.16 200);
+  --sh-jsxliterals: oklch(0.80 0.18 330);
+  --sh-sign: oklch(0.75 0.10 250);
+  --sh-comment: oklch(0.60 0.08 250);
 
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -144,4 +144,15 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Sugar-high syntax highlighting enhancements */
+  [data-sh-identifier] { color: var(--sh-identifier); }
+  [data-sh-keyword] { color: var(--sh-keyword); font-weight: 500; }
+  [data-sh-string] { color: var(--sh-string); }
+  [data-sh-class] { color: var(--sh-class); font-weight: 500; }
+  [data-sh-property] { color: var(--sh-property); }
+  [data-sh-entity] { color: var(--sh-entity); }
+  [data-sh-jsxliterals] { color: var(--sh-jsxliterals); }
+  [data-sh-sign] { color: var(--sh-sign); }
+  [data-sh-comment] { color: var(--sh-comment); font-style: italic; }
 }

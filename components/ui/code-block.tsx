@@ -183,12 +183,14 @@ const SyncCodeBlock: React.FC<CodeBlockProps> = ({ language, children, elementKe
       <div className="relative">
         <div
           className={cn(
-            'font-mono text-sm leading-relaxed p-2',
+            'font-mono text-sm leading-relaxed p-4',
+            'selection:bg-primary/20 selection:text-foreground',
             isWrapped && 'whitespace-pre-wrap break-words',
             !isWrapped && 'whitespace-pre overflow-x-auto',
           )}
           style={{
             fontFamily: geistMono.style.fontFamily,
+            lineHeight: '1.6',
           }}
           dangerouslySetInnerHTML={{
             __html: highlightedCode,
@@ -214,7 +216,7 @@ const CodeBlock: React.FC<CodeBlockProps> = React.memo(
                 <span className="text-xs text-muted-foreground">{children.split('\n').length} lines</span>
               </div>
             </div>
-            <div className="font-mono text-sm leading-relaxed p-2 text-muted-foreground">
+            <div className="font-mono text-sm leading-relaxed p-4 text-muted-foreground">
               <div className="animate-pulse">Loading code block...</div>
             </div>
           </div>
