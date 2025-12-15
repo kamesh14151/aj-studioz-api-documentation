@@ -1,0 +1,39 @@
+{
+  "name": "aj-studioz-chatbot",
+  "version": "1.0.0",
+  "description": "A simple HTML AI chatbot powered by AJ STUDIOZ API",
+  "main": "index.js",
+  "bin": {
+    "aj-studioz-chatbot": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "chatbot",
+    "aj-studioz",
+    "html",
+    "javascript",
+    "api",
+    "assistant"
+  ],
+  "author": "AJ STUDIOZ",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.22.1",
+    "open": "^8.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamesh14151/aj-studioz-api-documentation.git"
+  },
+  "homepage": "https://github.com/kamesh14151/aj-studioz-api-documentation#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/kamesh14151/aj-studioz-api-documentation/issues"
+  }
+}
