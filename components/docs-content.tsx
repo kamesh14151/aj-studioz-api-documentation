@@ -16,7 +16,7 @@ export function DocsContent() {
         </p>
 
         <div className="mt-10 space-y-3">
-          <h2 className="text-2xl font-semibold mb-6">Jump right in</h2>
+          <h2 id="jump-right-in" className="text-2xl font-semibold mb-6">Jump right in</h2>
           <div className="grid gap-4 sm:grid-cols-3">
             <Card className="p-6 hover:shadow-md transition-shadow cursor-pointer group">
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border-2 group-hover:border-foreground transition-colors">
@@ -68,7 +68,7 @@ export function DocsContent() {
         </div>
 
         <div className="mt-12">
-          <h2 className="text-2xl font-semibold mb-6">Questions and feedback</h2>
+          <h2 id="questions-feedback" className="text-2xl font-semibold mb-6">Questions and feedback</h2>
           <p className="text-muted-foreground">
             If you have any questions or feedback, feel free to email us at{" "}
             <a href="mailto:support@ajstudioz.dev" className="font-medium underline">
@@ -88,7 +88,7 @@ export function DocsContent() {
 
         <div className="space-y-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Test AJ STUDIOZ Multi-Model</h3>
+            <h3 id="test-aj-studioz" className="text-xl font-semibold mb-4">Test AJ STUDIOZ Multi-Model</h3>
             <CodeBlock
               language="bash"
               code={`# Check available models
@@ -104,7 +104,7 @@ curl -X POST "https://api.ajstudioz.dev/api/chat" \\
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Test NEXARIQ Lynxa Pro</h3>
+            <h3 id="test-nexariq" className="text-xl font-semibold mb-4">Test NEXARIQ Lynxa Pro</h3>
             <CodeBlock
               language="bash"
               code={`# Generate API key
@@ -184,7 +184,7 @@ curl -X POST "https://lynxa-pro-backend.vercel.app/api/lynxa" \\
 
       {/* Available Models */}
       <section id="available-models" className="mb-20 scroll-mt-24">
-        <h3 className="text-2xl font-semibold mb-6">Available Models</h3>
+        <h2 id="available-models-heading" className="text-2xl font-semibold mb-6">Available Models</h2>
 
         <div className="mb-8">
           <h4 className="text-lg font-semibold mb-4 text-muted-foreground">Cloud-Hosted Models (24/7)</h4>
@@ -238,7 +238,7 @@ curl -X POST "https://lynxa-pro-backend.vercel.app/api/lynxa" \\
 
       {/* AJ Endpoints */}
       <section id="aj-endpoints" className="mb-20 scroll-mt-24">
-        <h3 className="text-2xl font-semibold mb-6">API Endpoints</h3>
+        <h2 id="api-endpoints-heading" className="text-2xl font-semibold mb-6">API Endpoints</h2>
 
         <div className="space-y-10">
           <div>
@@ -283,11 +283,11 @@ curl -X POST "https://lynxa-pro-backend.vercel.app/api/lynxa" \\
 
       {/* AJ Examples */}
       <section id="aj-examples" className="mb-20 scroll-mt-24">
-        <h3 className="text-2xl font-bold tracking-tight mb-6">Code Examples</h3>
+        <h2 id="code-examples-heading" className="text-2xl font-bold tracking-tight mb-6">Code Examples</h2>
 
         <div className="space-y-6">
           <div>
-            <h4 className="text-lg font-semibold mb-3">JavaScript</h4>
+            <h4 id="javascript-example" className="text-lg font-semibold mb-3">JavaScript</h4>
             <CodeBlock
               language="javascript"
               code={`const response = await fetch('https://api.ajstudioz.dev/api/chat', {
@@ -348,7 +348,7 @@ print(response.json())`}
 
       {/* Model Specs */}
       <section id="model-specs" className="mb-20 scroll-mt-24">
-        <h3 className="text-2xl font-bold tracking-tight mb-6">Lynxa Pro Specifications</h3>
+        <h2 id="specifications-heading" className="text-2xl font-bold tracking-tight mb-6">Specifications</h2>
 
         <div className="grid gap-4 sm:grid-cols-2 mb-6">
           <Card className="p-4">
@@ -440,7 +440,7 @@ print(response.json())`}
 
       {/* Generate Key */}
       <section id="generate-key" className="mb-20 scroll-mt-24">
-        <h3 className="text-2xl font-bold tracking-tight mb-6">Generate API Key</h3>
+        <h2 id="generate-api-key" className="text-2xl font-bold tracking-tight mb-6">Generate API Key</h2>
         <p className="text-muted-foreground mb-4">
           Create a new API key for authentication. All NEXARIQ keys start with{" "}
           <code className="px-1.5 py-0.5 rounded bg-muted text-sm font-mono">nxq_</code>
@@ -479,7 +479,7 @@ print(response.json())`}
 
       {/* NEXARIQ Examples */}
       <section id="nexariq-examples" className="mb-20 scroll-mt-24">
-        <h3 className="text-2xl font-bold tracking-tight mb-6">Usage Examples</h3>
+        <h2 id="usage-examples" className="text-2xl font-bold tracking-tight mb-6">Usage Examples</h2>
 
         <div className="space-y-6">
           <div>
