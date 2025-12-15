@@ -13,7 +13,7 @@ export function DocsHeader() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-16 items-center gap-2 sm:gap-4 px-4 sm:px-6">
         <div className="flex items-center gap-3 sm:gap-6">
           <Button 

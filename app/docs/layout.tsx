@@ -10,7 +10,7 @@ export default function DocsLayout({
   return (
     <div className="flex min-h-screen flex-col">
       <DocsHeader />
-      <div className="flex flex-1">
+      <div className="flex flex-1 pt-16">
         <DocsSidebar />
         <main className="flex-1 lg:pl-64">
           <div className="mx-auto max-w-[1600px]">

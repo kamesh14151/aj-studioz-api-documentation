@@ -68,7 +68,7 @@ export function DocsSidebar() {
       
       {/* Sidebar */}
       <aside className={cn(
-        "fixed top-16 h-[calc(100vh-4rem)] w-64 overflow-y-auto border-r bg-background z-50 transition-transform duration-200 ease-in-out",
+        "fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 overflow-y-auto border-r bg-background/95 backdrop-blur-sm z-40 transition-transform duration-200 ease-in-out",
         "lg:translate-x-0 lg:block",
         isMobileOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
       )}>
