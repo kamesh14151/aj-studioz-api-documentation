@@ -280,59 +280,101 @@
             try {
                 statusElement.textContent = 'Processing...';
                 
+                const requestBody = {
+                    model: AJ_STUDIOZ_CONFIG.model,
+                    messages: [
+                        {
+                            role: "user",
+                            content: message
+                        }
+                    ]
+                };
+                
+                console.log('Sending request to:', AJ_STUDIOZ_CONFIG.endpoint);
+                console.log('Request headers:', AJ_STUDIOZ_CONFIG.headers);
+                console.log('Request body:', requestBody);
+                
                 const response = await fetch(AJ_STUDIOZ_CONFIG.endpoint, {
                     method: 'POST',
                     headers: AJ_STUDIOZ_CONFIG.headers,
-                    body: JSON.stringify({
-                        model: AJ_STUDIOZ_CONFIG.model,
-                        messages: [
-                            {
-                                role: "user",
-                                content: message
-                            }
-                        ]
-                    })
+                    body: JSON.stringify(requestBody)
                 });
 
+                console.log('Response status:', response.status);
+                console.log('Response headers:', response.headers);
+
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    const errorText = await response.text();
+                    console.log('Error response:', errorText);
+                    throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
                 }
 
                 const data = await response.json();
                 statusElement.textContent = 'Ready';
                 
+                // Debug: Log the actual response to understand the format
+                console.log('API Response:', data);
+                
                 // Handle AJ STUDIOZ API response format
-                if (data && data.content) {
-                    return data.content;
-                } else if (data && data.message) {
-                    return data.message;
-                } else if (data && data.response) {
-                    return data.response;
+                if (data && typeof data === 'object') {
+                    // AJ STUDIOZ specific format: output[0].content[0].text
+                    if (data.output && Array.isArray(data.output) && data.output.length > 0) {
+                        const output = data.output[0];
+                        if (output.content && Array.isArray(output.content) && output.content.length > 0) {
+                            const content = output.content[0];
+                            if (content.text) {
+                                return content.text;
+                            }
+                        }
+                    }
+                    
+                    // Fallback to other common formats
+                    if (data.content) {
+                        return data.content;
+                    } else if (data.message) {
+                        return data.message;
+                    } else if (data.response) {
+                        return data.response;
+                    } else if (data.text) {
+                        return data.text;
+                    } else if (data.answer) {
+                        return data.answer;
+                    } else if (data.reply) {
+                        return data.reply;
+                    } else if (data.choices && data.choices[0]) {
+                        // OpenAI-style response
+                        return data.choices[0].message ? data.choices[0].message.content : data.choices[0].text;
+                    } else if (data.data) {
+                        return data.data;
+                    } else {
+                        // If it's an object but doesn't match expected formats, try to find text
+                        const jsonStr = JSON.stringify(data, null, 2);
+                        return `🤖 I received a response, but couldn't parse it properly. Here's what I got:\n\n${jsonStr.substring(0, 500)}${jsonStr.length > 500 ? '...' : ''}`;
+                    }
                 } else if (typeof data === 'string') {
                     return data;
                 } else {
-                    throw new Error('Invalid response format from API');
+                    return `🤖 Unexpected response type: ${typeof data}`;
                 }
             } catch (error) {
                 console.error('AJ STUDIOZ API Error:', error);
                 statusElement.textContent = 'Error';
                 
                 // Fallback response when API has issues
-                return `I'm the AJ STUDIOZ AI Assistant! 🤖 
+                return `🤖 <strong>AJ STUDIOZ AI Assistant</strong>
                 
-<strong>Demo Mode:</strong> Currently using demo configuration:
-• <strong>Endpoint:</strong> https://api.ajstudioz.dev/api/chat
-• <strong>Model:</strong> kimi
-• <strong>API Key:</strong> aj-demo123456789abcdef (demo key)
+<strong>Connection Issue:</strong> I'm having trouble connecting to the API right now.
 
-You asked: "${message}"
+<strong>Error Details:</strong> ${error.message}
 
-<strong>To use your own API:</strong>
-1. Get your API key from AJ STUDIOZ dashboard
-2. Replace the X-API-Key in the configuration
-3. Optionally change the model name
+<strong>Your message:</strong> "${message}"
 
-<em>The API endpoint is working, but there might be a temporary issue. Please try again! 🚀</em>`;
+<strong>Troubleshooting:</strong>
+• Check if your API key is valid
+• Verify the API endpoint is accessible
+• Check browser console for detailed error logs
+
+<em>Please try again in a moment! 🚀</em>`;
             }
         }
 
