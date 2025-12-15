@@ -1,36 +1,24 @@
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Globe, Server, Zap, Shield, Clock, MapPin } from "lucide-react"
-import { LocationMap } from "@/components/expand-map"
 
 export default function HostingPage() {
   return (
     <>
       <section>
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">Where is Hosted</h1>
+          <h1 id="hosting-overview" className="text-4xl font-bold mb-4">Where is Hosted</h1>
           <p className="text-xl text-muted-foreground">
-            AJ STUDIOZ operates from multiple regions worldwide to ensure low-latency access and high availability 
-            for users across the globe. Our infrastructure is designed for performance and reliability.
+            AJ STUDIOZ operates exclusively from India to provide optimized performance for Indian users 
+            with complete data sovereignty and regulatory compliance.
           </p>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6">Global Infrastructure</h2>
+        <h2 id="india-infrastructure" className="text-3xl font-semibold mb-6">India Infrastructure</h2>
         
-        <div className="mb-12">
-          <LocationMap 
-            locations={[
-              { name: "US East", coordinates: [40.7128, -74.0060], color: "#3b82f6" },
-              { name: "US West", coordinates: [37.7749, -122.4194], color: "#10b981" },
-              { name: "Europe", coordinates: [51.5074, -0.1278], color: "#8b5cf6" },
-              { name: "Asia Pacific", coordinates: [35.6762, 139.6503], color: "#f59e0b" }
-            ]}
-          />
-        </div>
-
-        <h2 className="text-3xl font-semibold mb-6">Regional Details</h2>
+        <h2 id="regional-details" className="text-3xl font-semibold mb-6">Regional Details</h2>
         
-        <div className="grid gap-6 md:grid-cols-2 mb-12">
+        <div className="grid gap-6 mb-12">
           <Card className="p-6">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/20">
@@ -132,7 +120,7 @@ export default function HostingPage() {
           </Card>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6">Infrastructure Features</h2>
+        <h2 id="infrastructure-features" className="text-3xl font-semibold mb-6">Infrastructure Features</h2>
         
         <div className="grid gap-6 md:grid-cols-3 mb-12">
           <Card className="p-6">
@@ -140,10 +128,10 @@ export default function HostingPage() {
               <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/20">
                 <Globe className="h-5 w-5 text-blue-600 dark:text-blue-400" />
               </div>
-              <h3 className="text-lg font-semibold">Global CDN</h3>
+              <h3 className="text-lg font-semibold">India CDN</h3>
             </div>
             <p className="text-muted-foreground text-sm">
-              Content delivery network with 150+ edge locations worldwide for optimal performance and reduced latency.
+              Content delivery network with multiple edge locations across India for optimal performance and reduced latency.
             </p>
           </Card>
 
@@ -167,12 +155,12 @@ export default function HostingPage() {
               <h3 className="text-lg font-semibold">High Performance</h3>
             </div>
             <p className="text-muted-foreground text-sm">
-              Enterprise-grade hardware and optimized infrastructure delivering sub-100ms response times globally.
+              Enterprise-grade hardware and optimized infrastructure delivering sub-50ms response times within India.
             </p>
           </Card>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-6">Network Specifications</h2>
+        <h2 id="network-specifications" className="text-3xl font-semibold mb-6">Network Specifications</h2>
         
         <div className="grid gap-6 md:grid-cols-2 mb-12">
           <Card className="p-6">
@@ -183,8 +171,8 @@ export default function HostingPage() {
                 <span className="font-medium">100+ Gbps</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Global Latency</span>
-                <span className="font-medium">&lt; 100ms</span>
+                <span className="text-muted-foreground">India Latency</span>
+                <span className="font-medium">&lt; 50ms</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Uptime SLA</span>
@@ -206,11 +194,11 @@ export default function HostingPage() {
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Data Residency</span>
-                <span className="font-medium">Regional</span>
+                <span className="font-medium">India Only</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Compliance</span>
-                <span className="font-medium">SOC 2, GDPR</span>
+                <span className="font-medium">RBI, IT Act</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Monitoring</span>
@@ -220,22 +208,22 @@ export default function HostingPage() {
           </Card>
         </div>
 
-        <Card className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border-blue-200 dark:border-blue-800">
+        <Card className="p-6 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950/50 dark:to-red-950/50 border-orange-200 dark:border-orange-800">
           <div className="flex items-center gap-3 mb-4">
-            <Shield className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-            <h3 className="text-xl font-semibold">Enterprise-Grade Infrastructure</h3>
+            <Shield className="h-6 w-6 text-orange-600 dark:text-orange-400" />
+            <h3 className="text-xl font-semibold">Enterprise-Grade Infrastructure in India</h3>
           </div>
           <p className="text-muted-foreground mb-4">
-            Our global infrastructure is designed to meet the demands of enterprise customers with mission-critical workloads.
+            Our India-based infrastructure is designed to meet the demands of enterprise customers with mission-critical workloads while ensuring complete data sovereignty.
           </p>
           <div className="grid gap-4 md:grid-cols-2">
             <div>
               <p className="font-medium text-sm mb-2">Redundancy</p>
-              <p className="text-muted-foreground text-sm">Multi-region failover with automatic traffic routing</p>
+              <p className="text-muted-foreground text-sm">Multi-zone failover within India with automatic traffic routing</p>
             </div>
             <div>
-              <p className="font-medium text-sm mb-2">Monitoring</p>
-              <p className="text-muted-foreground text-sm">Real-time health checks and performance metrics</p>
+              <p className="font-medium text-sm mb-2">Data Sovereignty</p>
+              <p className="text-muted-foreground text-sm">All data remains within Indian borders for regulatory compliance</p>
             </div>
           </div>
         </Card>
