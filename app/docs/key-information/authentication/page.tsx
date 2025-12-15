@@ -46,11 +46,11 @@ export default function AuthenticationPage() {
           </Card>
         </div>
 
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">AJ STUDIOZ Multi-Model Authentication</h2>
+        <h2 id="aj-studioz-auth" className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">AJ STUDIOZ Multi-Model Authentication</h2>
         
         <div className="space-y-8">
           <div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">API Key Format</h3>
+            <h3 id="api-key-format" className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">API Key Format</h3>
             <p className="text-muted-foreground mb-4 leading-relaxed">
               All API requests to AJ STUDIOZ Multi-Model require authentication using an API key in the request headers. 
               Keys follow a specific format for easy identification and security.
@@ -77,7 +77,7 @@ curl -X POST "https://api.ajstudioz.dev/api/chat" \\
           </div>
 
           <div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Demo API Key</h3>
+            <h3 id="demo-api-key" className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Demo API Key</h3>
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               For testing and development, you can use our demo API key with limited rate limits:
             </p>

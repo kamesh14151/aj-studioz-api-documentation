@@ -14,11 +14,11 @@ export default function CodeExamplesPage() {
           </p>
         </div>
 
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Quick Start Example</h2>
+        <h2 id="quick-start-example" className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6">Quick Start Example</h2>
         
         <div className="space-y-6 sm:space-y-8">
           <div>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-3 sm:mb-4 flex items-center gap-2">
+            <h3 id="python-openai-sdk" className="text-lg sm:text-xl lg:text-2xl font-semibold mb-3 sm:mb-4 flex items-center gap-2">
               <Code className="h-5 w-5 sm:h-6 sm:w-6" />
               Python with OpenAI SDK
             </h3>
