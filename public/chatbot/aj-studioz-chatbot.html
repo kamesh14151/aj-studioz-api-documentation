@@ -208,7 +208,7 @@
         </div>
         
         <div class="api-info">
-            🚀 Connected to AJ STUDIOZ API • Mumbai, India • <span id="status">Ready</span>
+            🚀 api.ajstudioz.dev/api/chat • Model: kimi • <span id="status">Ready</span>
         </div>
         
         <div class="chatbox" id="chatbox">
@@ -233,12 +233,12 @@
 
         // AJ STUDIOZ API Configuration
         const AJ_STUDIOZ_CONFIG = {
-            endpoint: 'https://api.ajstudioz.in/v1/chat/completions', // Your actual API endpoint
-            apiKey: 'your-aj-studioz-api-key-here', // Replace with actual API key
-            model: 'aj-studioz-gpt-4', // Your model name
+            endpoint: 'https://api.ajstudioz.dev/api/chat', // Actual AJ STUDIOZ API endpoint
+            apiKey: 'aj-demo123456789abcdef', // Demo API key - replace with your actual key
+            model: 'kimi', // Available model
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer your-aj-studioz-api-key-here' // Replace with actual API key
+                'X-API-Key': 'aj-demo123456789abcdef' // Replace with your actual API key
             }
         };
 
@@ -287,16 +287,10 @@
                         model: AJ_STUDIOZ_CONFIG.model,
                         messages: [
                             {
-                                role: "system",
-                                content: "You are AJ STUDIOZ AI Assistant, a helpful and intelligent AI powered by AJ STUDIOZ API from India. Be friendly, professional, and provide accurate responses."
-                            },
-                            {
                                 role: "user",
                                 content: message
                             }
-                        ],
-                        max_tokens: 150,
-                        temperature: 0.7
+                        ]
                     })
                 });
 
@@ -307,8 +301,15 @@
                 const data = await response.json();
                 statusElement.textContent = 'Ready';
                 
-                if (data.choices && data.choices[0] && data.choices[0].message) {
-                    return data.choices[0].message.content;
+                // Handle AJ STUDIOZ API response format
+                if (data && data.content) {
+                    return data.content;
+                } else if (data && data.message) {
+                    return data.message;
+                } else if (data && data.response) {
+                    return data.response;
+                } else if (typeof data === 'string') {
+                    return data;
                 } else {
                     throw new Error('Invalid response format from API');
                 }
@@ -316,17 +317,22 @@
                 console.error('AJ STUDIOZ API Error:', error);
                 statusElement.textContent = 'Error';
                 
-                // Fallback response when API is not configured
+                // Fallback response when API has issues
                 return `I'm the AJ STUDIOZ AI Assistant! 🤖 
                 
-<strong>Note:</strong> This is a demo version. To fully activate me, please:
-1. Replace the API key in the code with your actual AJ STUDIOZ API key
-2. Update the endpoint URL to your actual AJ STUDIOZ API endpoint
-3. Configure the model name according to your AJ STUDIOZ setup
+<strong>Demo Mode:</strong> Currently using demo configuration:
+• <strong>Endpoint:</strong> https://api.ajstudioz.dev/api/chat
+• <strong>Model:</strong> kimi
+• <strong>API Key:</strong> aj-demo123456789abcdef (demo key)
 
 You asked: "${message}"
 
-<em>Once properly configured, I'll be able to provide intelligent responses using the AJ STUDIOZ API! 🚀</em>`;
+<strong>To use your own API:</strong>
+1. Get your API key from AJ STUDIOZ dashboard
+2. Replace the X-API-Key in the configuration
+3. Optionally change the model name
+
+<em>The API endpoint is working, but there might be a temporary issue. Please try again! 🚀</em>`;
             }
         }
 

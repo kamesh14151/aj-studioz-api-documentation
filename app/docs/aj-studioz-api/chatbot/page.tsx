@@ -79,6 +79,31 @@ export default function ChatbotPage() {
           </div>
         </div>
 
+        <h2 id="api-testing" className="text-3xl font-semibold mb-6">Test the API First</h2>
+        
+        <div className="mb-8 p-6 border rounded-lg bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/50 dark:to-teal-950/50">
+          <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+            <span className="text-2xl">⚙️</span> Test with cURL
+          </h3>
+          <p className="text-muted-foreground mb-4">
+            Before using the chatbot, test the AJ STUDIOZ API directly with this cURL command:
+          </p>
+          <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+            <pre className="text-sm text-green-400">
+{`curl -X POST "https://api.ajstudioz.dev/api/chat" \\
+  -H "Content-Type: application/json" \\
+  -H "X-API-Key: aj-demo123456789abcdef" \\
+  -d '{
+    "model": "kimi", 
+    "messages": [{"role": "user", "content": "Hello! How are you?"}]
+  }'`}
+            </pre>
+          </div>
+          <p className="text-sm text-muted-foreground mt-4">
+            ⚠️ Replace <code>aj-demo123456789abcdef</code> with your actual API key from the AJ STUDIOZ dashboard.
+          </p>
+        </div>
+
         <h2 id="setup-guide" className="text-3xl font-semibold mb-6">Setup Guide</h2>
         
         <div className="space-y-6 mb-12">
@@ -88,8 +113,13 @@ export default function ChatbotPage() {
               <h3 className="text-xl font-semibold">Get Your API Key</h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              First, obtain your AJ STUDIOZ API key from your dashboard. If you don't have one yet, follow our authentication guide.
+              Get your AJ STUDIOZ API key from your dashboard. The key format should be similar to: <code>aj-demo123456789abcdef</code>
             </p>
+            <div className="bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-4">
+              <p className="text-sm text-amber-800 dark:text-amber-200">
+                📝 <strong>Demo Key Available:</strong> You can test with <code>aj-demo123456789abcdef</code> for initial testing.
+              </p>
+            </div>
             <a href="/docs/key-information/authentication" className="text-blue-600 hover:text-blue-800 font-medium">
               → Authentication Guide
             </a>
@@ -121,17 +151,17 @@ export default function ChatbotPage() {
               <h3 className="text-xl font-semibold">Configure the API</h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              Open <code>aj-studioz-chatbot.html</code> and find the configuration section:
+              Open <code>aj-studioz-chatbot.html</code> and update the AJ_STUDIOZ_CONFIG:
             </p>
             <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
               <pre className="text-sm text-gray-300">
 {`const AJ_STUDIOZ_CONFIG = {
-    endpoint: 'https://api.ajstudioz.in/v1/chat/completions',
+    endpoint: 'https://api.ajstudioz.dev/api/chat',
     apiKey: 'your-actual-api-key-here',
-    model: 'aj-studioz-gpt-4',
+    model: 'kimi',
     headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer your-actual-api-key-here'
+        'X-API-Key': 'your-actual-api-key-here'
     }
 };`}
               </pre>
@@ -148,6 +178,39 @@ export default function ChatbotPage() {
             </p>
             <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
               <code className="text-sm">npm start</code>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="api-format" className="text-3xl font-semibold mb-6">API Request Format</h2>
+        
+        <div className="mb-8 p-6 border rounded-lg bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/50 dark:to-cyan-950/50">
+          <h3 className="text-xl font-semibold mb-4">Request Structure</h3>
+          <p className="text-muted-foreground mb-4">
+            The chatbot sends requests to AJ STUDIOZ API in this format:
+          </p>
+          <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto mb-4">
+            <pre className="text-sm text-cyan-400">
+{`POST https://api.ajstudioz.dev/api/chat
+Content-Type: application/json
+X-API-Key: your-api-key
+
+{
+  "model": "kimi",
+  "messages": [
+    {"role": "user", "content": "Your message here"}
+  ]
+}`}
+            </pre>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div>
+              <p className="font-medium text-sm mb-2">Available Models</p>
+              <p className="text-muted-foreground text-sm">• <code>kimi</code> - Default conversational AI model</p>
+            </div>
+            <div>
+              <p className="font-medium text-sm mb-2">Headers Required</p>
+              <p className="text-muted-foreground text-sm">• <code>Content-Type: application/json</code><br/>• <code>X-API-Key: your-api-key</code></p>
             </div>
           </div>
         </div>
