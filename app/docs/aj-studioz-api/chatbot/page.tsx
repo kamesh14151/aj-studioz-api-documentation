@@ -1,3 +1,5 @@
+import { CodeBlock } from "@/components/code-block"
+
 export default function ChatbotPage() {
   return (
     <>
@@ -16,11 +18,10 @@ export default function ChatbotPage() {
           <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
             <span className="text-2xl">🚀</span> Try it instantly with NPX
           </h3>
-          <div className="bg-black rounded-lg p-4 mb-4">
-            <code className="text-green-400 font-mono">
-              npx aj-studioz-chatbot
-            </code>
-          </div>
+          <CodeBlock
+            language="bash"
+            code="npx aj-studioz-chatbot"
+          />
           <p className="text-sm text-muted-foreground">
             This command will start a local server and open the chatbot in your browser automatically!
           </p>
@@ -88,17 +89,16 @@ export default function ChatbotPage() {
           <p className="text-muted-foreground mb-4">
             Before using the chatbot, test the AJ STUDIOZ API directly with this cURL command:
           </p>
-          <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
-            <pre className="text-sm text-green-400">
-{`curl -X POST "https://api.ajstudioz.dev/api/chat" \\
+          <CodeBlock
+            language="bash"
+            code={`curl -X POST "https://api.ajstudioz.dev/api/chat" \\
   -H "Content-Type: application/json" \\
   -H "X-API-Key: aj-demo123456789abcdef" \\
   -d '{
     "model": "kimi", 
     "messages": [{"role": "user", "content": "Hello! How are you?"}]
   }'`}
-            </pre>
-          </div>
+          />
           <p className="text-sm text-muted-foreground mt-4">
             ⚠️ Replace <code>aj-demo123456789abcdef</code> with your actual API key from the AJ STUDIOZ dashboard.
           </p>
@@ -106,8 +106,8 @@ export default function ChatbotPage() {
 
         <h2 id="setup-guide" className="text-3xl font-semibold mb-6">Setup Guide</h2>
         
-        <div className="space-y-6 mb-12">
-          <div className="p-6 border rounded-lg">
+        <div className="space-y-8 mb-12">
+          <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
               <h3 className="text-xl font-semibold">Get Your API Key</h3>
@@ -125,7 +125,7 @@ export default function ChatbotPage() {
             </a>
           </div>
 
-          <div className="p-6 border rounded-lg">
+          <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
               <h3 className="text-xl font-semibold">Download the Chatbot</h3>
@@ -133,19 +133,25 @@ export default function ChatbotPage() {
             <p className="text-muted-foreground mb-4">
               You can use NPX for instant setup or download the files manually:
             </p>
-            <div className="space-y-3">
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                <p className="text-sm font-medium mb-2">Option 1: NPX (Recommended)</p>
-                <code className="text-sm">npx aj-studioz-chatbot</code>
+            <div className="space-y-4">
+              <div>
+                <p className="text-sm font-medium mb-3">Option 1: NPX (Recommended)</p>
+                <CodeBlock
+                  language="bash"
+                  code="npx aj-studioz-chatbot"
+                />
               </div>
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                <p className="text-sm font-medium mb-2">Option 2: Manual Download</p>
-                <code className="text-sm">git clone https://github.com/kamesh14151/aj-studioz-api-documentation.git</code>
+              <div>
+                <p className="text-sm font-medium mb-3">Option 2: Manual Download</p>
+                <CodeBlock
+                  language="bash"
+                  code="git clone https://github.com/kamesh14151/aj-studioz-api-documentation.git"
+                />
               </div>
             </div>
           </div>
 
-          <div className="p-6 border rounded-lg">
+          <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
               <h3 className="text-xl font-semibold">Configure the API</h3>
@@ -153,9 +159,9 @@ export default function ChatbotPage() {
             <p className="text-muted-foreground mb-4">
               Open <code>aj-studioz-chatbot.html</code> and update the AJ_STUDIOZ_CONFIG:
             </p>
-            <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
-              <pre className="text-sm text-gray-300">
-{`const AJ_STUDIOZ_CONFIG = {
+            <CodeBlock
+              language="javascript"
+              code={`const AJ_STUDIOZ_CONFIG = {
     endpoint: 'https://api.ajstudioz.dev/api/chat',
     apiKey: 'your-actual-api-key-here',
     model: 'kimi',
@@ -164,11 +170,10 @@ export default function ChatbotPage() {
         'X-API-Key': 'your-actual-api-key-here'
     }
 };`}
-              </pre>
-            </div>
+            />
           </div>
 
-          <div className="p-6 border rounded-lg">
+          <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
               <h3 className="text-xl font-semibold">Test & Deploy</h3>
@@ -176,9 +181,10 @@ export default function ChatbotPage() {
             <p className="text-muted-foreground mb-4">
               Open the HTML file in your browser or start the server and test your chatbot!
             </p>
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-              <code className="text-sm">npm start</code>
-            </div>
+            <CodeBlock
+              language="bash"
+              code="npm start"
+            />
           </div>
         </div>
 
@@ -189,9 +195,9 @@ export default function ChatbotPage() {
           <p className="text-muted-foreground mb-4">
             The chatbot sends requests to AJ STUDIOZ API in this format:
           </p>
-          <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto mb-4">
-            <pre className="text-sm text-cyan-400">
-{`POST https://api.ajstudioz.dev/api/chat
+          <CodeBlock
+            language="http"
+            code={`POST https://api.ajstudioz.dev/api/chat
 Content-Type: application/json
 X-API-Key: your-api-key
 
@@ -201,8 +207,7 @@ X-API-Key: your-api-key
     {"role": "user", "content": "Your message here"}
   ]
 }`}
-            </pre>
-          </div>
+          />
           <div className="grid gap-4 md:grid-cols-2">
             <div>
               <p className="font-medium text-sm mb-2">Available Models</p>
@@ -217,8 +222,8 @@ X-API-Key: your-api-key
 
         <h2 id="customization" className="text-3xl font-semibold mb-6">Customization Options</h2>
         
-        <div className="grid gap-6 md:grid-cols-2 mb-12">
-          <div className="p-6 border rounded-lg">
+        <div className="grid gap-8 md:grid-cols-2 mb-12">
+          <div>
             <h3 className="text-lg font-semibold mb-3">🎨 Styling</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>• Change gradient colors and themes</li>
@@ -228,7 +233,7 @@ X-API-Key: your-api-key
             </ul>
           </div>
 
-          <div className="p-6 border rounded-lg">
+          <div>
             <h3 className="text-lg font-semibold mb-3">🤖 AI Behavior</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>• Customize the system message</li>
@@ -238,7 +243,7 @@ X-API-Key: your-api-key
             </ul>
           </div>
 
-          <div className="p-6 border rounded-lg">
+          <div>
             <h3 className="text-lg font-semibold mb-3">⚙️ Features</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>• Add file upload capabilities</li>
@@ -248,7 +253,7 @@ X-API-Key: your-api-key
             </ul>
           </div>
 
-          <div className="p-6 border rounded-lg">
+          <div>
             <h3 className="text-lg font-semibold mb-3">🚀 Deployment</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>• Deploy to Vercel, Netlify, or GitHub Pages</li>
@@ -261,22 +266,22 @@ X-API-Key: your-api-key
 
         <h2 id="troubleshooting" className="text-3xl font-semibold mb-6">Troubleshooting</h2>
         
-        <div className="space-y-4 mb-12">
-          <div className="p-4 border rounded-lg">
+        <div className="space-y-6 mb-12">
+          <div>
             <h4 className="font-semibold mb-2">❓ Chatbot shows "demo version" message</h4>
             <p className="text-sm text-muted-foreground">
               This means the API key hasn't been configured yet. Replace "your-aj-studioz-api-key-here" with your actual API key.
             </p>
           </div>
 
-          <div className="p-4 border rounded-lg">
+          <div>
             <h4 className="font-semibold mb-2">🚫 API errors or no responses</h4>
             <p className="text-sm text-muted-foreground">
               Check your API endpoint URL and ensure your API key has the correct permissions. See the authentication guide for details.
             </p>
           </div>
 
-          <div className="p-4 border rounded-lg">
+          <div>
             <h4 className="font-semibold mb-2">📱 Mobile display issues</h4>
             <p className="text-sm text-muted-foreground">
               The chatbot is responsive by default. If you have issues, check your viewport meta tag and CSS media queries.
