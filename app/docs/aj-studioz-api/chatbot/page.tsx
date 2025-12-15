@@ -14,7 +14,7 @@ export default function ChatbotPage() {
 
         <h2 id="quick-start" className="text-3xl font-semibold mb-6">Quick Start</h2>
         
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-8">
+        <div className="mb-8">
           <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
             <span className="text-2xl">🚀</span> Try it instantly with NPX
           </h3>
@@ -57,7 +57,7 @@ export default function ChatbotPage() {
 
         <h2 id="live-demo" className="text-3xl font-semibold mb-6">Live Demo</h2>
         
-        <div className="mb-8 p-6 border rounded-lg bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/50 dark:to-orange-950/50">
+        <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-xl font-semibold">Interactive Chatbot Preview</h3>
             <a 
@@ -71,10 +71,10 @@ export default function ChatbotPage() {
               </svg>
             </a>
           </div>
-          <div className="bg-white rounded-lg border-2 border-gray-200 overflow-hidden">
+          <div className="rounded-lg overflow-hidden">
             <iframe 
               src="/chatbot/aj-studioz-chatbot.html" 
-              className="w-full h-96"
+              className="w-full h-96 rounded-lg"
               title="AJ STUDIOZ Chatbot Demo"
             ></iframe>
           </div>
@@ -82,7 +82,7 @@ export default function ChatbotPage() {
 
         <h2 id="api-testing" className="text-3xl font-semibold mb-6">Test the API First</h2>
         
-        <div className="mb-8 p-6 border rounded-lg bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/50 dark:to-teal-950/50">
+        <div className="mb-8">
           <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
             <span className="text-2xl">⚙️</span> Test with cURL
           </h3>
@@ -115,8 +115,8 @@ export default function ChatbotPage() {
             <p className="text-muted-foreground mb-4">
               Get your AJ STUDIOZ API key from your dashboard. The key format should be similar to: <code>aj-demo123456789abcdef</code>
             </p>
-            <div className="bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-4">
-              <p className="text-sm text-amber-800 dark:text-amber-200">
+            <div className="mb-4">
+              <p className="text-sm text-muted-foreground">
                 📝 <strong>Demo Key Available:</strong> You can test with <code>aj-demo123456789abcdef</code> for initial testing.
               </p>
             </div>
@@ -190,7 +190,7 @@ export default function ChatbotPage() {
 
         <h2 id="api-format" className="text-3xl font-semibold mb-6">API Request Format</h2>
         
-        <div className="mb-8 p-6 border rounded-lg bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/50 dark:to-cyan-950/50">
+        <div className="mb-8">
           <h3 className="text-xl font-semibold mb-4">Request Structure</h3>
           <p className="text-muted-foreground mb-4">
             The chatbot sends requests to AJ STUDIOZ API in this format:
@@ -289,7 +289,7 @@ X-API-Key: your-api-key
           </div>
         </div>
 
-        <div className="p-6 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/50 dark:to-emerald-950/50 border border-green-200 dark:border-green-800 rounded-lg">
+        <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-2xl">🎉</span>
             <h3 className="text-xl font-semibold">Ready to Get Started?</h3>
