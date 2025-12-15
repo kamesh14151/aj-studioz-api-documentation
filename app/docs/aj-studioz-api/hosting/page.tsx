@@ -21,100 +21,33 @@ export default function HostingPage() {
         <div className="grid gap-6 mb-12">
           <Card className="p-6">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/20">
-                <MapPin className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold">United States East</h3>
-                <Badge variant="outline" className="text-xs">Primary</Badge>
-              </div>
-            </div>
-            <p className="text-muted-foreground text-sm mb-4">
-              Our primary data center located in Virginia, providing optimal performance for North American users.
-            </p>
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-green-600" />
-                <span>Average latency: ~50ms</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="h-4 w-4 text-green-600" />
-                <span>99.9% uptime SLA</span>
-              </div>
-            </div>
-          </Card>
-
-          <Card className="p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-green-100 dark:bg-green-900/20">
-                <MapPin className="h-5 w-5 text-green-600 dark:text-green-400" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold">United States West</h3>
-                <Badge variant="outline" className="text-xs">Secondary</Badge>
-              </div>
-            </div>
-            <p className="text-muted-foreground text-sm mb-4">
-              West coast infrastructure in California for optimized performance across the Pacific region.
-            </p>
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-green-600" />
-                <span>Average latency: ~60ms</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="h-4 w-4 text-green-600" />
-                <span>99.9% uptime SLA</span>
-              </div>
-            </div>
-          </Card>
-
-          <Card className="p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-purple-100 dark:bg-purple-900/20">
-                <MapPin className="h-5 w-5 text-purple-600 dark:text-purple-400" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold">Europe</h3>
-                <Badge variant="outline" className="text-xs">Regional</Badge>
-              </div>
-            </div>
-            <p className="text-muted-foreground text-sm mb-4">
-              European data center in London serving EMEA users with GDPR compliance and data sovereignty.
-            </p>
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-green-600" />
-                <span>Average latency: ~40ms</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="h-4 w-4 text-green-600" />
-                <span>GDPR compliant</span>
-              </div>
-            </div>
-          </Card>
-
-          <Card className="p-6">
-            <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-orange-100 dark:bg-orange-900/20">
                 <MapPin className="h-5 w-5 text-orange-600 dark:text-orange-400" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold">Asia Pacific</h3>
-                <Badge variant="outline" className="text-xs">Regional</Badge>
+                <h3 className="text-lg font-semibold">India</h3>
+                <Badge variant="outline" className="text-xs">Primary</Badge>
               </div>
             </div>
             <p className="text-muted-foreground text-sm mb-4">
-              Asia Pacific infrastructure in Tokyo providing low-latency access for users across Asia.
+              Our primary data center located in Mumbai, India, providing optimal performance for Indian users with complete data sovereignty and regulatory compliance.
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-green-600" />
-                <span>Average latency: ~30ms</span>
+                <span>Average latency: ~20ms</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-green-600" />
                 <span>99.9% uptime SLA</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Shield className="h-4 w-4 text-green-600" />
+                <span>Data residency in India</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Shield className="h-4 w-4 text-green-600" />
+                <span>RBI & IT Act compliant</span>
               </div>
             </div>
           </Card>
