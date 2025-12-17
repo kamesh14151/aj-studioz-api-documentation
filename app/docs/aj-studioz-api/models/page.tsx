@@ -29,7 +29,7 @@ export default function ModelsPage() {
               gradient="purple"
               badgeText="262K Context"
               badgeColor="#8b5cf6"
-              title="Moonshot Kimi"
+              title="Kimi"
               description="Ultra-long context model with 16,384 max completion tokens"
               ctaText="Use Model"
               ctaHref="#kimi"
@@ -41,7 +41,7 @@ export default function ModelsPage() {
               badgeText="131K Context"
               badgeColor="#f59e0b"
               title="Qwen3"
-              description="Advanced multilingual model with 40,960 max tokens"
+              description="Advanced multilingual model with 40,960 max completion tokens"
               ctaText="Use Model"
               ctaHref="#qwen3"
               imageUrl="/qwen-icon-seeklogo.png"
@@ -52,9 +52,9 @@ export default function ModelsPage() {
               badgeText="131K Context"
               badgeColor="#10b981"
               title="Llama-4"
-              description="Latest Llama generation with 8,192 max tokens"
+              description="Latest Llama generation with 8,192 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#llama4"
+              ctaHref="#llama-4"
               imageUrl="/meta-color.svg"
             />
             
@@ -63,7 +63,7 @@ export default function ModelsPage() {
               badgeText="131K Context"
               badgeColor="#6b7280"
               title="GPT-OSS"
-              description="Open-source GPT variant with 65,536 max tokens"
+              description="Open-source GPT variant with 65,536 max completion tokens"
               ctaText="Use Model"
               ctaHref="#gpt-oss"
               imageUrl="/open-ai-seeklogo.png"
@@ -74,7 +74,7 @@ export default function ModelsPage() {
               badgeText="131K Context"
               badgeColor="#8b5cf6"
               title="GPT-OSS-120B"
-              description="Large parameter GPT variant with 65,536 max tokens"
+              description="Large parameter GPT variant with 65,536 max completion tokens"
               ctaText="Use Model"
               ctaHref="#gpt-oss-120b"
               imageUrl="/open-ai-seeklogo.png"
@@ -85,7 +85,7 @@ export default function ModelsPage() {
               badgeText="131K Context"
               badgeColor="#10b981"
               title="GLM-4.5-Air"
-              description="Efficient GLM model with 8,192 max tokens"
+              description="Efficient GLM model with 8,192 max completion tokens"
               ctaText="Use Model"
               ctaHref="#glm-4.5-air"
               imageUrl="/z-ai-logo-hd.png"
@@ -96,7 +96,7 @@ export default function ModelsPage() {
               badgeText="131K Context"
               badgeColor="#f59e0b"
               title="ZAI-GLM-4.6"
-              description="Enhanced GLM model with 40,960 max tokens"
+              description="Enhanced GLM model with 40,960 max completion tokens"
               ctaText="Use Model"
               ctaHref="#zai-glm-4.6"
               imageUrl="/z-ai-logo-hd.png"
@@ -106,10 +106,10 @@ export default function ModelsPage() {
               gradient="purple"
               badgeText="131K Context"
               badgeColor="#8b5cf6"
-              title="DeepSeek-R1"
-              description="Reasoning-optimized model with 8,192 max tokens"
+              title="DeepSeek-R1-Qwen3-8B"
+              description="Reasoning-optimized model with 8,192 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#deepseek-r1"
+              ctaHref="#deepseek-r1-qwen3-8b"
               imageUrl="/deepseek-ai-icon-seeklogo.png"
             />
             
@@ -118,7 +118,7 @@ export default function ModelsPage() {
               badgeText="131K Context"
               badgeColor="#10b981"
               title="Qwen3-Coder"
-              description="Code-specialized model with 8,192 max tokens"
+              description="Code-specialized model with 8,192 max completion tokens"
               ctaText="Use Model"
               ctaHref="#qwen3-coder"
               imageUrl="/qwen-icon-seeklogo.png"
@@ -129,9 +129,20 @@ export default function ModelsPage() {
               badgeText="131K Context"
               badgeColor="#6b7280"
               title="Mistral-Small-24B"
-              description="Efficient Mistral variant with 8,192 max tokens"
+              description="Efficient Mistral variant with 8,192 max completion tokens"
               ctaText="Use Model"
               ctaHref="#mistral-small-24b"
+              imageUrl="/mistral-ai-icon-seeklogo.png"
+            />
+            
+            <GradientCard
+              gradient="gray"
+              badgeText="131K Context"
+              badgeColor="#6b7280"
+              title="Mistral-Small-3.1-24B"
+              description="Updated Mistral variant with 8,192 max completion tokens"
+              ctaText="Use Model"
+              ctaHref="#mistral-small-3.1-24b"
               imageUrl="/mistral-ai-icon-seeklogo.png"
             />
           </div>
@@ -153,7 +164,7 @@ export default function ModelsPage() {
               badgeText="8K Context"
               badgeColor="#f59e0b"
               title="Qwen3-Local"
-              description="Alibaba Cloud model with 8,192 max tokens"
+              description="Alibaba Cloud model with 8,192 max completion tokens"
               ctaText="Use Model"
               ctaHref="#qwen3-local"
               imageUrl="/qwen-icon-seeklogo.png"
@@ -164,7 +175,7 @@ export default function ModelsPage() {
               badgeText="8K Context"
               badgeColor="#8b5cf6"
               title="GLM-4.6"
-              description="Zhipu AI model with 8,192 max tokens"
+              description="Zhipu AI model with 8,192 max completion tokens"
               ctaText="Use Model"
               ctaHref="#glm-4.6"
               imageUrl="/z-ai-logo-hd.png"
@@ -186,7 +197,7 @@ export default function ModelsPage() {
   -H "Content-Type: application/json" \\
   -H "X-API-Key: your-api-key" \\
   -d '{
-    "model": "kimi",  // Change this to any model ID
+    "model": "kimi",  // Use: kimi, qwen3, llama-4, gpt-oss, etc.
     "messages": [{"role": "user", "content": "Hello!"}]
   }'`}
               </code>
