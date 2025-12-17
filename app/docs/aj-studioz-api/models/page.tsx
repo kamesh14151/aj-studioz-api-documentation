@@ -145,6 +145,130 @@ export default function ModelsPage() {
               ctaHref="#mistral-small-3.1-24b"
               imageUrl="/mistral-ai-icon-seeklogo.png"
             />
+            
+            <GradientCard
+              gradient="purple"
+              badgeText="Premium Tier"
+              badgeColor="#8b5cf6"
+              title="DeepSeek-R1"
+              description="Advanced reasoning model with premium capabilities"
+              ctaText="Use Model"
+              ctaHref="#deepseek-r1"
+              imageUrl="/deepseek-ai-icon-seeklogo.png"
+            />
+            
+            <GradientCard
+              gradient="purple"
+              badgeText="Premium Tier"
+              badgeColor="#8b5cf6"
+              title="DeepSeek-R1-0528"
+              description="Stable version of DeepSeek R1 reasoning model"
+              ctaText="Use Model"
+              ctaHref="#deepseek-r1-0528"
+              imageUrl="/deepseek-ai-icon-seeklogo.png"
+            />
+            
+            <GradientCard
+              gradient="blue"
+              badgeText="Premium Tier"
+              badgeColor="#3b82f6"
+              title="Grok-3"
+              description="xAI's advanced reasoning model by Elon Musk"
+              ctaText="Use Model"
+              ctaHref="#grok-3"
+              imageUrl="/placeholder-logo.png"
+            />
+            
+            <GradientCard
+              gradient="blue"
+              badgeText="High Tier"
+              badgeColor="#3b82f6"
+              title="Grok-3-Mini"
+              description="Efficient version of xAI's Grok-3 model"
+              ctaText="Use Model"
+              ctaHref="#grok-3-mini"
+              imageUrl="/placeholder-logo.png"
+            />
+            
+            <GradientCard
+              gradient="green"
+              badgeText="High Tier"
+              badgeColor="#10b981"
+              title="Phi-4"
+              description="Microsoft's latest Phi-4 model with advanced capabilities"
+              ctaText="Use Model"
+              ctaHref="#phi-4"
+              imageUrl="/placeholder-logo.png"
+            />
+            
+            <GradientCard
+              gradient="gray"
+              badgeText="Low Tier"
+              badgeColor="#6b7280"
+              title="Mistral-Nemo"
+              description="Fast and efficient Mistral Nemo model"
+              ctaText="Use Model"
+              ctaHref="#mistral-nemo"
+              imageUrl="/mistral-ai-icon-seeklogo.png"
+            />
+          </div>
+        </div>
+        
+        {/* GitHub Models Section */}
+        <div className="mb-12 sm:mb-16">
+          <div className="flex items-center gap-3 mb-6 sm:mb-8">
+            <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/20">
+              <svg className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </div>
+            <div>
+              <h2 className="text-xl sm:text-2xl font-semibold">GitHub Models (FREE for Students) 🎓</h2>
+              <p className="text-sm sm:text-base text-muted-foreground">FREE unlimited access to premium models via GitHub Student Pack</p>
+            </div>
+          </div>
+          
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <GradientCard
+              gradient="green"
+              badgeText="🎓 FREE"
+              badgeColor="#10b981"
+              title="GPT-4o"
+              description="Premium OpenAI GPT-4 Omni - most advanced model"
+              ctaText="Use Model"
+              ctaHref="#gpt-4o"
+              imageUrl="/open-ai-seeklogo.png"
+            />
+            
+            <GradientCard
+              gradient="green"
+              badgeText="🎓 FREE"
+              badgeColor="#10b981"
+              title="GPT-4o-Mini"
+              description="Fast & efficient GPT-4 - unlimited for students"
+              ctaText="Use Model"
+              ctaHref="#gpt-4o-mini"
+              imageUrl="/open-ai-seeklogo.png"
+            />
+          </div>
+          
+          <div className="mt-6 p-6 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+            <div className="flex items-start gap-3">
+              <div className="p-2 rounded-lg bg-green-100 dark:bg-green-900/40">
+                <svg className="h-5 w-5 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-green-900 dark:text-green-100 mb-2">Student Benefits</h3>
+                <ul className="text-sm text-green-800 dark:text-green-200 space-y-1">
+                  <li>• FREE unlimited access with GitHub Student Pack</li>
+                  <li>• No rate limits for qualified students</li>
+                  <li>• Access to premium OpenAI models</li>
+                  <li>• No credit card required</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -197,7 +321,7 @@ export default function ModelsPage() {
   -H "Content-Type: application/json" \\
   -H "X-API-Key: your-api-key" \\
   -d '{
-    "model": "kimi",  // Use: kimi, qwen3, llama-4, gpt-oss, etc.
+    "model": "gpt-4o-mini",  // Use: gpt-4o, gpt-4o-mini, kimi, qwen3, deepseek-r1, grok-3, etc.
     "messages": [{"role": "user", "content": "Hello!"}]
   }'`}
               </code>
