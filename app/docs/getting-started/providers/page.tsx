@@ -1,6 +1,6 @@
 "use client"
 
-import {Card, CardBody, CardFooter, Image} from "@heroui/react";
+import {Card, CardBody, CardFooter, Image} from "@heroui/card";
 
 export default function ProvidersPage() {
   const providers = [
@@ -66,28 +66,28 @@ export default function ProvidersPage() {
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <Card className="p-4 text-center">
-            <CardBody className="pb-0">
-              <div className="text-2xl font-bold text-primary">8+</div>
-              <p className="text-sm text-muted-foreground">AI Providers</p>
+          <Card className="text-center">
+            <CardBody>
+              <div className="text-2xl font-bold text-blue-600">8+</div>
+              <p className="text-sm text-gray-600">AI Providers</p>
             </CardBody>
           </Card>
-          <Card className="p-4 text-center">
-            <CardBody className="pb-0">
-              <div className="text-2xl font-bold text-primary">25+</div>
-              <p className="text-sm text-muted-foreground">AI Models</p>
+          <Card className="text-center">
+            <CardBody>
+              <div className="text-2xl font-bold text-blue-600">25+</div>
+              <p className="text-sm text-gray-600">AI Models</p>
             </CardBody>
           </Card>
-          <Card className="p-4 text-center">
-            <CardBody className="pb-0">
-              <div className="text-2xl font-bold text-primary">99.9%</div>
-              <p className="text-sm text-muted-foreground">Uptime</p>
+          <Card className="text-center">
+            <CardBody>
+              <div className="text-2xl font-bold text-blue-600">99.9%</div>
+              <p className="text-sm text-gray-600">Uptime</p>
             </CardBody>
           </Card>
-          <Card className="p-4 text-center">
-            <CardBody className="pb-0">
-              <div className="text-2xl font-bold text-primary">24/7</div>
-              <p className="text-sm text-muted-foreground">Support</p>
+          <Card className="text-center">
+            <CardBody>
+              <div className="text-2xl font-bold text-blue-600">24/7</div>
+              <p className="text-sm text-gray-600">Support</p>
             </CardBody>
           </Card>
         </div>
@@ -126,7 +126,7 @@ export default function ProvidersPage() {
 
         {/* Features Section */}
         <div className="mt-16 grid gap-8 md:grid-cols-3">
-          <Card className="p-6">
+          <Card>
             <CardBody>
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 rounded-lg bg-blue-100">
@@ -136,13 +136,13 @@ export default function ProvidersPage() {
                 </div>
                 <h3 className="text-xl font-semibold">High Performance</h3>
               </div>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600">
                 Lightning-fast inference with sub-second response times across all provider models.
               </p>
             </CardBody>
           </Card>
 
-          <Card className="p-6">
+          <Card>
             <CardBody>
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 rounded-lg bg-green-100">
@@ -152,13 +152,13 @@ export default function ProvidersPage() {
                 </div>
                 <h3 className="text-xl font-semibold">Unified API</h3>
               </div>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600">
                 Single API endpoint to access all providers - switch between models seamlessly.
               </p>
             </CardBody>
           </Card>
 
-          <Card className="p-6">
+          <Card>
             <CardBody>
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 rounded-lg bg-purple-100">
@@ -168,7 +168,7 @@ export default function ProvidersPage() {
                 </div>
                 <h3 className="text-xl font-semibold">Enterprise Security</h3>
               </div>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600">
                 Bank-grade security with SOC 2 compliance and advanced encryption protocols.
               </p>
             </CardBody>
