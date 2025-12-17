@@ -33,7 +33,7 @@ export default function ModelsPage() {
               description="Ultra-long context model with 16,384 max completion tokens"
               ctaText="Use Model"
               ctaHref="#kimi"
-              imageUrl="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop"
+              imageUrl="/images (1) (1).png"
             />
             
             <GradientCard
@@ -44,7 +44,7 @@ export default function ModelsPage() {
               description="Advanced multilingual model with 40,960 max tokens"
               ctaText="Use Model"
               ctaHref="#qwen3"
-              imageUrl="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=300&fit=crop"
+              imageUrl="/qwen-icon-seeklogo.png"
             />
             
             <GradientCard
@@ -55,7 +55,7 @@ export default function ModelsPage() {
               description="Latest Llama generation with 8,192 max tokens"
               ctaText="Use Model"
               ctaHref="#llama4"
-              imageUrl="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=300&fit=crop"
+              imageUrl="/meta-color.svg"
             />
             
             <GradientCard
@@ -66,7 +66,7 @@ export default function ModelsPage() {
               description="Open-source GPT variant with 65,536 max tokens"
               ctaText="Use Model"
               ctaHref="#gpt-oss"
-              imageUrl="https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&h=300&fit=crop"
+              imageUrl="/open-ai-seeklogo.png"
             />
             
             <GradientCard
@@ -77,7 +77,7 @@ export default function ModelsPage() {
               description="Large parameter GPT variant with 65,536 max tokens"
               ctaText="Use Model"
               ctaHref="#gpt-oss-120b"
-              imageUrl="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=400&h=300&fit=crop"
+              imageUrl="/open-ai-seeklogo.png"
             />
             
             <GradientCard
@@ -88,7 +88,7 @@ export default function ModelsPage() {
               description="Efficient GLM model with 8,192 max tokens"
               ctaText="Use Model"
               ctaHref="#glm-4.5-air"
-              imageUrl="https://images.unsplash.com/photo-1639322537228-f710d846310a?w=400&h=300&fit=crop"
+              imageUrl="/z-ai-logo-hd.png"
             />
             
             <GradientCard
@@ -99,7 +99,7 @@ export default function ModelsPage() {
               description="Enhanced GLM model with 40,960 max tokens"
               ctaText="Use Model"
               ctaHref="#zai-glm-4.6"
-              imageUrl="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=300&fit=crop"
+              imageUrl="/z-ai-logo-hd.png"
             />
             
             <GradientCard
@@ -110,7 +110,7 @@ export default function ModelsPage() {
               description="Reasoning-optimized model with 8,192 max tokens"
               ctaText="Use Model"
               ctaHref="#deepseek-r1"
-              imageUrl="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop"
+              imageUrl="/deepseek-ai-icon-seeklogo.png"
             />
             
             <GradientCard
@@ -121,7 +121,7 @@ export default function ModelsPage() {
               description="Code-specialized model with 8,192 max tokens"
               ctaText="Use Model"
               ctaHref="#qwen3-coder"
-              imageUrl="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop"
+              imageUrl="/qwen-icon-seeklogo.png"
             />
             
             <GradientCard
@@ -132,7 +132,7 @@ export default function ModelsPage() {
               description="Efficient Mistral variant with 8,192 max tokens"
               ctaText="Use Model"
               ctaHref="#mistral-small-24b"
-              imageUrl="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&h=300&fit=crop"
+              imageUrl="/mistral-ai-icon-seeklogo.png"
             />
           </div>
         </div>
