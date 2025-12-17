@@ -1,6 +1,7 @@
 "use client"
 
-import {Card, CardBody, CardFooter, Image} from "@heroui/card";
+import {Card, CardBody, CardFooter} from "@heroui/card";
+import {Image} from "@heroui/image";
 
 export default function ProvidersPage() {
   const providers = [

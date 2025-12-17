@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "@heroui/card": "^2.2.26",
-    "@heroui/system": "^2.4.24",
-    "@heroui/theme": "^2.4.24",
+    "@heroui/image": "^2.2.18",
+    "@heroui/system": "2.4.24",
+    "@heroui/theme": "2.4.24",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "1.2.2",
     "@radix-ui/react-alert-dialog": "1.1.4",
