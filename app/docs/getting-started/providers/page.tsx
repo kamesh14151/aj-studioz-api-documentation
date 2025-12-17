@@ -6,7 +6,7 @@ export default function ProvidersPage() {
   const providers = [
     {
       title: "OpenAI",
-      img: "/OpenAI_Logo.svg.png",
+      img: "/open-ai-seeklogo.png",
       description: "Leading AI research company",
       models: "GPT-4o, GPT-4o-mini"
     },
@@ -24,7 +24,7 @@ export default function ProvidersPage() {
     },
     {
       title: "Alibaba Cloud",
-      img: "/alibaba-logo.png",
+      img: "/Alibaba Cloud_idGn5T4TRR_0.png",
       description: "Chinese tech giant",
       models: "Qwen3, Qwen3-local, Qwen3-coder"
     },
@@ -66,45 +66,52 @@ export default function ProvidersPage() {
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <Card className="p-6 text-center">
-            <div className="text-2xl font-bold text-blue-600">8+</div>
-            <p className="text-sm text-gray-600">AI Providers</p>
+          <Card className="p-6 text-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-950 dark:to-indigo-900 border-blue-200 dark:border-blue-800">
+            <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">8+</div>
+            <p className="text-sm text-gray-700 dark:text-gray-300 font-medium">AI Providers</p>
           </Card>
-          <Card className="p-6 text-center">
-            <div className="text-2xl font-bold text-blue-600">25+</div>
-            <p className="text-sm text-gray-600">AI Models</p>
+          <Card className="p-6 text-center bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-950 dark:to-emerald-900 border-green-200 dark:border-green-800">
+            <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">25+</div>
+            <p className="text-sm text-gray-700 dark:text-gray-300 font-medium">AI Models</p>
           </Card>
-          <Card className="p-6 text-center">
-            <div className="text-2xl font-bold text-blue-600">99.9%</div>
-            <p className="text-sm text-gray-600">Uptime</p>
+          <Card className="p-6 text-center bg-gradient-to-br from-purple-50 to-violet-100 dark:from-purple-950 dark:to-violet-900 border-purple-200 dark:border-purple-800">
+            <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">99.9%</div>
+            <p className="text-sm text-gray-700 dark:text-gray-300 font-medium">Uptime</p>
           </Card>
-          <Card className="p-6 text-center">
-            <div className="text-2xl font-bold text-blue-600">24/7</div>
-            <p className="text-sm text-gray-600">Support</p>
+          <Card className="p-6 text-center bg-gradient-to-br from-orange-50 to-red-100 dark:from-orange-950 dark:to-red-900 border-orange-200 dark:border-orange-800">
+            <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">24/7</div>
+            <p className="text-sm text-gray-700 dark:text-gray-300 font-medium">Support</p>
           </Card>
         </div>
 
         {/* Providers Grid */}
-        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {providers.map((provider, index) => (
             <Card 
               key={index} 
-              className="hover:shadow-lg transition-all duration-200 cursor-pointer"
+              className="group hover:shadow-xl transition-all duration-300 cursor-pointer border-0 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 hover:scale-105"
             >
-              <div className="overflow-visible p-0">
-                <img
-                  alt={provider.title}
-                  className="w-full object-contain h-[140px] p-4"
-                  src={provider.img}
-                />
+              <div className="relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="p-6 flex justify-center items-center h-[140px] bg-white dark:bg-gray-800 rounded-t-lg">
+                  <img
+                    alt={provider.title}
+                    className="max-h-16 max-w-24 object-contain filter group-hover:brightness-110 transition-all duration-300"
+                    src={provider.img}
+                  />
+                </div>
               </div>
-              <div className="p-4 text-small flex-col items-start">
+              <div className="p-5">
                 <div className="w-full">
-                  <div className="flex justify-between items-start mb-2">
-                    <b className="text-lg">{provider.title}</b>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors duration-300">{provider.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">{provider.description}</p>
+                  <div className="flex flex-wrap gap-1">
+                    {provider.models.split(", ").map((model, idx) => (
+                      <span key={idx} className="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-xs px-2 py-1 rounded-full font-medium">
+                        {model}
+                      </span>
+                    ))}
                   </div>
-                  <p className="text-gray-500 text-xs mb-2">{provider.description}</p>
-                  <p className="text-blue-600 text-xs font-medium">{provider.models}</p>
                 </div>
               </div>
             </Card>
