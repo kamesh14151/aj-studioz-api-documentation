@@ -50,7 +50,7 @@ curl -X POST "https://api.ajstudioz.dev/api/chat/completions" \\
   -H "Content-Type: application/json" \\
   -H "X-API-Key: your-api-key" \\
   -d '{
-    "model": "claude-3.5-sonnet",
+    "model": "kimi",
     "messages": [
       {"role": "system", "content": "You are a helpful assistant."},
       {"role": "user", "content": "Explain quantum computing"}
@@ -85,7 +85,7 @@ curl -X POST "https://api.ajstudioz.dev/api/chat/completions" \\
                         </div>
                         <div className="mb-4 md:mb-0">
                           <span className="text-xs text-muted-foreground md:hidden">Description: </span>
-                          <span>Model to use for completion (e.g., "claude-3.5-sonnet")</span>
+                          <span>Model to use for completion (e.g., "kimi", "qwen3", "llama-4")</span>
                         </div>
                       </div>
                       
@@ -170,24 +170,34 @@ curl -X GET "https://api.ajstudioz.dev/api/models" \\
 
 # Response
 {
+  "object": "list",
   "data": [
     {
-      "id": "claude-3.5-sonnet",
-      "object": "model",
-      "owned_by": "anthropic",
-      "context_length": 200000
-    },
-    {
-      "id": "gpt-4-turbo", 
-      "object": "model",
-      "owned_by": "openai",
-      "context_length": 128000
-    },
-    {
       "id": "kimi",
-      "object": "model", 
-      "owned_by": "moonshot",
-      "context_length": 262144
+      "object": "model",
+      "created": 1699564800,
+      "owned_by": "Moonshot AI",
+      "active": true,
+      "context_window": 262144,
+      "max_completion_tokens": 16384
+    },
+    {
+      "id": "qwen3",
+      "object": "model",
+      "created": 1699564800,
+      "owned_by": "Alibaba Cloud", 
+      "active": true,
+      "context_window": 131072,
+      "max_completion_tokens": 40960
+    },
+    {
+      "id": "llama-4",
+      "object": "model",
+      "created": 1699564800,
+      "owned_by": "Meta",
+      "active": true,
+      "context_window": 131072,
+      "max_completion_tokens": 8192
     }
   ]
 }`}
