@@ -63,15 +63,6 @@ const GradientCard = React.forwardRef<HTMLDivElement, GradientCardProps>(
           className={cn(cardVariants({ gradient }), className)}
           {...props}
         >
-          {/* Brand logo image with animation */}
-          <motion.img
-            src={imageUrl}
-            alt={`${title} logo`}
-            variants={imageAnimation}
-            transition={{ type: "spring", stiffness: 400, damping: 15 }}
-            className="absolute top-4 right-4 w-12 h-12 sm:w-16 sm:h-16 object-contain opacity-90 pointer-events-none"
-          />
-
           {/* Card Content */}
           <div className="z-10 flex flex-col h-full">
             {/* Badge */}
@@ -97,6 +88,17 @@ const GradientCard = React.forwardRef<HTMLDivElement, GradientCardProps>(
               {ctaText}
               <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
+            
+            {/* Brand logo image at bottom */}
+            <div className="flex justify-center mt-4 sm:mt-6">
+              <motion.img
+                src={imageUrl}
+                alt={`${title} logo`}
+                variants={imageAnimation}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="w-12 h-12 sm:w-16 sm:h-16 object-contain opacity-90"
+              />
+            </div>
           </div>
         </div>
       </motion.div>
