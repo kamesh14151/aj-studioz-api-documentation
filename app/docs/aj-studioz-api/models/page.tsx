@@ -32,7 +32,7 @@ export default function ModelsPage() {
               title="Kimi"
               description="Ultra-long context model with 16,384 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#kimi"
+              ctaHref="/docs/aj-studioz-api/models/kimi"
               imageUrl="/images (1) (1).png"
             />
             
@@ -43,7 +43,7 @@ export default function ModelsPage() {
               title="Qwen3"
               description="Advanced multilingual model with 40,960 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#qwen3"
+              ctaHref="/docs/aj-studioz-api/models/qwen3"
               imageUrl="/qwen-icon-seeklogo.png"
             />
             
@@ -54,7 +54,7 @@ export default function ModelsPage() {
               title="Llama-4"
               description="Latest Llama generation with 8,192 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#llama-4"
+              ctaHref="/docs/aj-studioz-api/models/llama-4"
               imageUrl="/meta-color.svg"
             />
             
@@ -65,7 +65,7 @@ export default function ModelsPage() {
               title="GPT-OSS"
               description="Open-source GPT variant with 65,536 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#gpt-oss"
+              ctaHref="/docs/aj-studioz-api/models/gpt-oss"
               imageUrl="/open-ai-seeklogo.png"
             />
             
@@ -76,7 +76,7 @@ export default function ModelsPage() {
               title="GPT-OSS-120B"
               description="Large parameter GPT variant with 65,536 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#gpt-oss-120b"
+              ctaHref="/docs/aj-studioz-api/models/gpt-oss-120b"
               imageUrl="/open-ai-seeklogo.png"
             />
             
@@ -87,7 +87,7 @@ export default function ModelsPage() {
               title="GLM-4.5-Air"
               description="Efficient GLM model with 8,192 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#glm-4.5-air"
+              ctaHref="/docs/aj-studioz-api/models/glm-4.5-air"
               imageUrl="/z-ai-logo-hd.png"
             />
             
@@ -98,7 +98,7 @@ export default function ModelsPage() {
               title="ZAI-GLM-4.6"
               description="Enhanced GLM model with 40,960 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#zai-glm-4.6"
+              ctaHref="/docs/aj-studioz-api/models/zai-glm-4.6"
               imageUrl="/z-ai-logo-hd.png"
             />
             
@@ -109,7 +109,7 @@ export default function ModelsPage() {
               title="DeepSeek-R1-Qwen3-8B"
               description="Reasoning-optimized model with 8,192 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#deepseek-r1-qwen3-8b"
+              ctaHref="/docs/aj-studioz-api/models/deepseek-r1-qwen3-8b"
               imageUrl="/deepseek-ai-icon-seeklogo.png"
             />
             
@@ -120,7 +120,7 @@ export default function ModelsPage() {
               title="Qwen3-Coder"
               description="Code-specialized model with 8,192 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#qwen3-coder"
+              ctaHref="/docs/aj-studioz-api/models/qwen3-coder"
               imageUrl="/qwen-icon-seeklogo.png"
             />
             
@@ -131,7 +131,7 @@ export default function ModelsPage() {
               title="Mistral-Small-24B"
               description="Efficient Mistral variant with 8,192 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#mistral-small-24b"
+              ctaHref="/docs/aj-studioz-api/models/mistral-small-24b"
               imageUrl="/mistral-ai-icon-seeklogo.png"
             />
             
@@ -142,7 +142,7 @@ export default function ModelsPage() {
               title="Mistral-Small-3.1-24B"
               description="Updated Mistral variant with 8,192 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#mistral-small-3.1-24b"
+              ctaHref="/docs/aj-studioz-api/models/mistral-small-3.1-24b"
               imageUrl="/mistral-ai-icon-seeklogo.png"
             />
             
@@ -153,7 +153,7 @@ export default function ModelsPage() {
               title="DeepSeek-R1"
               description="Advanced reasoning model with premium capabilities"
               ctaText="Use Model"
-              ctaHref="#deepseek-r1"
+              ctaHref="/docs/aj-studioz-api/models/deepseek-r1"
               imageUrl="/deepseek-ai-icon-seeklogo.png"
             />
             
@@ -164,7 +164,7 @@ export default function ModelsPage() {
               title="DeepSeek-R1-0528"
               description="Stable version of DeepSeek R1 reasoning model"
               ctaText="Use Model"
-              ctaHref="#deepseek-r1-0528"
+              ctaHref="/docs/aj-studioz-api/models/deepseek-r1-0528"
               imageUrl="/deepseek-ai-icon-seeklogo.png"
             />
             
@@ -175,7 +175,7 @@ export default function ModelsPage() {
               title="Grok-3"
               description="xAI's advanced reasoning model by Elon Musk"
               ctaText="Use Model"
-              ctaHref="#grok-3"
+              ctaHref="/docs/aj-studioz-api/models/grok-3"
               imageUrl="/xai-logo-hd.png"
             />
             
@@ -186,7 +186,7 @@ export default function ModelsPage() {
               title="Grok-3-Mini"
               description="Efficient version of xAI's Grok-3 model"
               ctaText="Use Model"
-              ctaHref="#grok-3-mini"
+              ctaHref="/docs/aj-studioz-api/models/grok-3-mini"
               imageUrl="/xai-logo-hd.png"
             />
             
@@ -197,8 +197,8 @@ export default function ModelsPage() {
               title="Phi-4"
               description="Microsoft's latest Phi-4 model with advanced capabilities"
               ctaText="Use Model"
-              ctaHref="#phi-4"
-              imageUrl="/placeholder-logo.png"
+              ctaHref="/docs/aj-studioz-api/models/phi-4"
+              imageUrl="/Microsoft_Logo_512px.png"
             />
             
             <GradientCard
@@ -208,7 +208,7 @@ export default function ModelsPage() {
               title="Mistral-Nemo"
               description="Fast and efficient Mistral Nemo model"
               ctaText="Use Model"
-              ctaHref="#mistral-nemo"
+              ctaHref="/docs/aj-studioz-api/models/mistral-nemo"
               imageUrl="/mistral-ai-icon-seeklogo.png"
             />
           </div>
@@ -236,7 +236,7 @@ export default function ModelsPage() {
               title="GPT-4o"
               description="Premium OpenAI GPT-4 Omni - most advanced model"
               ctaText="Use Model"
-              ctaHref="#gpt-4o"
+              ctaHref="/docs/aj-studioz-api/models/gpt-4o"
               imageUrl="/open-ai-seeklogo.png"
             />
             
@@ -247,7 +247,7 @@ export default function ModelsPage() {
               title="GPT-4o-Mini"
               description="Fast & efficient GPT-4 - unlimited for students"
               ctaText="Use Model"
-              ctaHref="#gpt-4o-mini"
+              ctaHref="/docs/aj-studioz-api/models/gpt-4o-mini"
               imageUrl="/open-ai-seeklogo.png"
             />
           </div>
@@ -290,7 +290,7 @@ export default function ModelsPage() {
               title="Qwen3-Local"
               description="Alibaba Cloud model with 8,192 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#qwen3-local"
+              ctaHref="/docs/aj-studioz-api/models/qwen3-local"
               imageUrl="/qwen-icon-seeklogo.png"
             />
             
@@ -301,7 +301,7 @@ export default function ModelsPage() {
               title="GLM-4.6"
               description="Zhipu AI model with 8,192 max completion tokens"
               ctaText="Use Model"
-              ctaHref="#glm-4.6"
+              ctaHref="/docs/aj-studioz-api/models/glm-4.6"
               imageUrl="/z-ai-logo-hd.png"
             />
           </div>
