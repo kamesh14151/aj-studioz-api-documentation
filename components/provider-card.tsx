@@ -10,32 +10,23 @@ interface ProviderCardProps {
 
 const ProviderCard = ({ title, description, models, img }: ProviderCardProps) => {
   return (
-    <Card className='group hover:shadow-xl transition-all duration-300 cursor-pointer border-0 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 hover:scale-105 sm:flex-row sm:gap-0'>
-      <CardContent className='grow-1 px-0'>
-        <div className="p-6 flex justify-center items-center h-[140px] bg-white dark:bg-gray-800 rounded-l-lg">
-          <img
-            src={img}
-            alt={title}
-            className='max-h-16 max-w-24 object-contain filter group-hover:brightness-110 transition-all duration-300'
-          />
-        </div>
+    <Card className='max-w-lg py-0 flex-row gap-0 group hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-[1.02]'>
+      <CardContent className='grow-1 px-0 w-1/3'>
+        <img
+          src={img}
+          alt={title}
+          className='size-full rounded-l-xl object-contain p-4 bg-white dark:bg-gray-800 group-hover:scale-105 transition-transform duration-300'
+        />
       </CardContent>
-      <div className='sm:min-w-54'>
-        <CardHeader className='pt-6'>
-          <CardTitle className="group-hover:text-blue-600 transition-colors duration-300">{title}</CardTitle>
-          <CardDescription className="text-gray-600 dark:text-gray-400 line-clamp-2">{description}</CardDescription>
+      <div className='flex-1 flex flex-col justify-between'>
+        <CardHeader className='pb-2'>
+          <CardTitle className="text-lg group-hover:text-blue-600 transition-colors duration-300">{title}</CardTitle>
+          <CardDescription className="text-sm text-gray-600 dark:text-gray-400">{description}</CardDescription>
         </CardHeader>
-        <CardFooter className='gap-2 py-6 flex-wrap'>
-          {models.split(", ").map((model, idx) => (
-            <Button 
-              key={idx} 
-              size="sm"
-              variant="outline"
-              className='bg-transparent bg-gradient-to-br from-blue-500 to-purple-500 text-white border-0 hover:from-blue-600 hover:to-purple-600 focus-visible:ring-blue-600/20 text-xs px-2 py-1'
-            >
-              {model}
-            </Button>
-          ))}
+        <CardFooter className='gap-3 pt-2 pb-4'>
+          <Button className='bg-transparent bg-gradient-to-br from-purple-500 to-pink-500 text-white focus-visible:ring-pink-600/20 hover:from-purple-600 hover:to-pink-600 text-sm'>
+            Explore Models
+          </Button>
         </CardFooter>
       </div>
     </Card>
