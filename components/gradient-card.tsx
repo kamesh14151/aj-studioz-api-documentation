@@ -63,13 +63,13 @@ const GradientCard = React.forwardRef<HTMLDivElement, GradientCardProps>(
           className={cn(cardVariants({ gradient }), className)}
           {...props}
         >
-          {/* Decorative background image with animation */}
+          {/* Brand logo image with animation */}
           <motion.img
             src={imageUrl}
-            alt={`${title} background graphic`}
+            alt={`${title} logo`}
             variants={imageAnimation}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
-            className="absolute -right-1/4 -bottom-1/4 w-3/4 opacity-80 pointer-events-none dark:opacity-30"
+            className="absolute top-4 right-4 w-12 h-12 sm:w-16 sm:h-16 object-contain opacity-90 pointer-events-none"
           />
 
           {/* Card Content */}
