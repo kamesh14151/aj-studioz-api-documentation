@@ -1,6 +1,7 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
+import ProviderCard from "@/components/provider-card"
 
 export default function ProvidersPage() {
   const providers = [
@@ -85,36 +86,15 @@ export default function ProvidersPage() {
         </div>
 
         {/* Providers Grid */}
-        <div className="gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="gap-6 grid grid-cols-1 lg:grid-cols-2">
           {providers.map((provider, index) => (
-            <Card 
-              key={index} 
-              className="group hover:shadow-xl transition-all duration-300 cursor-pointer border-0 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 hover:scale-105"
-            >
-              <div className="relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="p-6 flex justify-center items-center h-[140px] bg-white dark:bg-gray-800 rounded-t-lg">
-                  <img
-                    alt={provider.title}
-                    className="max-h-16 max-w-24 object-contain filter group-hover:brightness-110 transition-all duration-300"
-                    src={provider.img}
-                  />
-                </div>
-              </div>
-              <div className="p-5">
-                <div className="w-full">
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors duration-300">{provider.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">{provider.description}</p>
-                  <div className="flex flex-wrap gap-1">
-                    {provider.models.split(", ").map((model, idx) => (
-                      <span key={idx} className="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-xs px-2 py-1 rounded-full font-medium">
-                        {model}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </Card>
+            <ProviderCard
+              key={index}
+              title={provider.title}
+              description={provider.description}
+              models={provider.models}
+              img={provider.img}
+            />
           ))}
         </div>
 
