@@ -156,7 +156,7 @@ export default function ModelsPage() {
               description="Alibaba Cloud model with 8,192 max tokens"
               ctaText="Use Model"
               ctaHref="#qwen3-local"
-              imageUrl="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=300&fit=crop"
+              imageUrl="/qwen-icon-seeklogo.png"
             />
             
             <GradientCard
@@ -167,7 +167,7 @@ export default function ModelsPage() {
               description="Zhipu AI model with 8,192 max tokens"
               ctaText="Use Model"
               ctaHref="#glm-4.6"
-              imageUrl="https://images.unsplash.com/photo-1639322537228-f710d846310a?w=400&h=300&fit=crop"
+              imageUrl="/z-ai-logo-hd.png"
             />
           </div>
         </div>
