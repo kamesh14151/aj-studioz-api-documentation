@@ -176,7 +176,7 @@ export default function ModelsPage() {
               description="xAI's advanced reasoning model by Elon Musk"
               ctaText="Use Model"
               ctaHref="#grok-3"
-              imageUrl="/placeholder-logo.png"
+              imageUrl="/xai-logo-hd.png"
             />
             
             <GradientCard
@@ -187,7 +187,7 @@ export default function ModelsPage() {
               description="Efficient version of xAI's Grok-3 model"
               ctaText="Use Model"
               ctaHref="#grok-3-mini"
-              imageUrl="/placeholder-logo.png"
+              imageUrl="/xai-logo-hd.png"
             />
             
             <GradientCard
